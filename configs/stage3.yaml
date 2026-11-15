@@ -1,0 +1,68 @@
+# Stage 3 — hypothetical project and financing assumptions.
+# Every parameter carries: value, unit, status, source.
+#   status: sourced      = taken from a document we opened and read (page given)
+#           derived      = computed from sourced values / our data
+#           illustrative = our choice where no reliable public benchmark was found (sensitivity-tested)
+# NOTHING here represents any bank's lending terms or a real project's costs.
+
+project:
+  name: "Hypothetical ground-mounted solar park, Flevoland"
+  latitude: {value: 52.45, unit: deg, status: illustrative, source: "Hypothetical site used in Stages 1–2 (near Biddinghuizen)"}
+  longitude: {value: 5.70, unit: deg, status: illustrative, source: "Hypothetical site used in Stages 1–2"}
+  dc_capacity_kwp: {value: 10000, unit: kWp, status: sourced,
+    source: "PBL Eindadvies SDE++ 2025, Tabel 5.23 p.81: reference installation ≥1 MWp <20 MWp grondgebonden = 10.000 kWp"}
+  inverter_ac_fraction_of_dc: {value: 0.70, unit: "kWac/kWp", status: sourced,
+    source: "PBL SDE++ 2025 p.70 §5.1.14: inverter costs based on inverter capacity of 70% of peak power"}
+  grid_export_fraction_of_dc: {value: 0.50, unit: "kW/kWp", status: sourced,
+    source: "PBL SDE++ 2025 p.72 & Tabel 5.23 '(net=50%)': most solar categories assume grid connection at 50% of peak power"}
+  configuration: {value: "fixed-tilt, south-facing, 35°, monofacial c-Si, free-standing", status: illustrative,
+    source: "Kept identical to Stages 1–2 so the verified PVGIS 6 series is reused; Dutch parks often use lower tilt/east-west (limitation)"}
+  operating_life_years: {value: 25, unit: years, status: illustrative,
+    source: "Assumption. PBL uses a 20-year analysis period (p.75 §5.1.19); only the debt tenor (15 y) enters the DSCR analysis"}
+  degradation_per_year: {value: 0.0064, unit: "fraction/yr", status: sourced,
+    source: "PBL SDE++ 2025 p.76 §5.1.23: 0,64% average annual power/production decline. (Jordan & Kurtz 2013 median 0.5%/yr as cross-reference)"}
+
+costs:
+  capex_eur_per_kwp: {value: 426, unit: "EUR/kWp", status: sourced, source: "PBL SDE++ 2025 Tabel 5.23 p.81 (SDE++ 2025 column)"}
+  fixed_opex_eur_per_kwp_yr: {value: 15.9, unit: "EUR/kWp/yr", status: sourced,
+    source: "PBL SDE++ 2025 Tabel 5.23 p.81 / Tabel 5.10b p.74 (O&M 4.0, green maintenance 1.5, nature-inclusive 2.9, insurance 2.5, security 0.5, grid connection 2.0, curtailment equipment 0.1, asset mgmt 1.0, property tax 1.4). Excludes land lease (p.73)"}
+  variable_opex_eur_per_mwh: {value: 1.9, unit: "EUR/MWh", status: sourced, source: "PBL SDE++ 2025 Tabel 5.23 p.81: 0,0019 EUR/kWh (before erratum)"}
+  imbalance_cost_eur_per_mwh: {value: 7.0, unit: "EUR/MWh", status: sourced,
+    source: "PBL erratum 6 June 2025 p.4: long-term imbalance cost 0,0070 EUR/kWh for solar; variable O&M becomes 0,0089 EUR/kWh"}
+  imbalance_cost_stress_eur_per_mwh: {value: 18.1, unit: "EUR/MWh", status: sourced,
+    source: "PBL erratum 6 June 2025 p.4: calculated 2023 imbalance cost for solar 0,0181 EUR/kWh"}
+  land_lease_eur_per_kwp_yr: {value: 0.0, unit: "EUR/kWp/yr", status: illustrative,
+    source: "PBL excludes land/roof rent by design (p.73). Real projects pay it: tested in sensitivity (0–10 EUR/kWp/yr illustrative)"}
+  inverter_replacement_eur: {value: 130000, unit: "EUR (year 13)", status: sourced,
+    source: "PBL SDE++ 2025 Tabel 5.23 p.81: eenmalige O&M-kosten in jaar 13 = 130.000 EUR"}
+  opex_inflation: {value: 0.02, unit: "fraction/yr", status: sourced, source: "PBL SDE++ 2025 p.33 §3.1.5: 2,0% per year"}
+
+financing:
+  gearing_debt_share: {value: 0.80, unit: "debt/capex", status: sourced,
+    source: "PBL SDE++ 2025 p.32 §3.1.3: 80% debt / 20% equity for zon-pv. CAVEAT: for SDE++-subsidised projects; an unsubsidised project would likely support less debt (tested)"}
+  interest_rate: {value: 0.040, unit: "nominal p.a.", status: sourced,
+    source: "PBL SDE++ 2025 p.29: total nominal interest for solar & wind loans ≈ 4,0% (10-y IRS ~2,4–2,5% + 1,5% margin)"}
+  tenor_years: {value: 15, unit: years, status: sourced, source: "PBL SDE++ 2025 p.33 §3.1.6: loan term assumed equal to 15-year subsidy period"}
+  repayment: {value: annuity, status: illustrative, source: "Design choice: simplest transparent repayment profile; sculpted repayment illustrated in the Stage 3 report"}
+  tax_rate: {value: 0.258, unit: fraction, status: sourced, source: "PBL SDE++ 2025 p.32 §3.1.4: marginal corporate tax rate 25,8%"}
+  depreciation_years: {value: 15, unit: years, status: sourced, source: "PBL SDE++ 2025 p.33 §3.1.6: depreciation term equal to subsidy period"}
+  return_on_equity_reference: {value: 0.09, unit: "nominal p.a.", status: sourced, source: "PBL SDE++ 2025 p.31: 9,0% for zon-pv (reference only; not used in DSCR)"}
+  dsra_months: {value: 6, unit: "months of debt service", status: illustrative,
+    source: "Secondary/training sources describe ~6-month DSRA as typical; not verified against term sheets"}
+  dscr_reference_levels: {value: [1.00, 1.20, 1.50], unit: "x", status: illustrative,
+    source: "1.00 = cash break-even; 1.20 ≈ often-cited contracted level; 1.50 ≈ often-cited merchant level (secondary/training sources, unverified). Reference lines only — not covenants of any real lender"}
+
+ppa:
+  structure: {value: "fixed-price, pay-as-produced, physical/virtual neutral", status: illustrative, source: "Design choice"}
+  price_eur_per_mwh: {value: 60.0, unit: "EUR/MWh", status: illustrative,
+    source: "No verified Dutch solar PPA price. Reference only: LevelTen Market-Averaged Continental Solar Index €63.64/MWh (Q3 2024) and €62.31/MWh (Q4 2024), offers across 22 European countries, as reported by PV Tech (17 Oct 2024; 30 Jan 2025). Base rounded down; range tested"}
+  price_range_eur_per_mwh: {value: [40, 45, 50, 55, 60, 65, 70], unit: "EUR/MWh", status: illustrative, source: "Sensitivity grid"}
+  tenor_years: {value: 15, unit: years, status: illustrative, source: "Set equal to debt tenor for a clean comparison; shorter tenors leave a merchant tail (not modelled)"}
+  indexation: {value: 0.0, unit: "fraction/yr", status: illustrative, source: "Flat nominal price (common, conservative vs inflating opex)"}
+  negative_price_clause: {value: ["none", "no_payment_and_curtail"], status: illustrative,
+    source: "Two generic clause types; real contracts vary"}
+  imbalance_borne_by_project: {value: true, status: illustrative,
+    source: "Kept with the project in BOTH cases so the comparison isolates price risk; in practice often passed through as a PPA price discount"}
+
+benchmark:
+  small_system_kwp: {value: 1000, unit: kWp, status: illustrative, source: "Stage 1–2 test system; no grid cap; same per-kWp costs"}

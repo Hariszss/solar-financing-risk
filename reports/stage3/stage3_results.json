@@ -1,0 +1,2379 @@
+{
+  "price_status": "Prices: Energy-Charts (Bundesnetzagentur | SMARD.de, CC BY 4.0); not independently cross-checked against ENTSO-E",
+  "assumptions": {
+    "dc_kwp": 10000,
+    "export_cap_fraction": 0.5,
+    "capex_eur_per_kwp": 426,
+    "fixed_opex_eur_per_kwp": 15.9,
+    "variable_opex_eur_per_mwh": 1.9,
+    "imbalance_eur_per_mwh": 7.0,
+    "land_lease_eur_per_kwp": 0.0,
+    "gearing": 0.8,
+    "interest_rate": 0.04,
+    "tenor": 15,
+    "tax_rate": 0.258,
+    "depreciation_years": 15,
+    "production_factor": 1.0,
+    "degradation": 0.0064,
+    "opex_inflation": 0.02,
+    "inverter_replacement_eur_per_kwp": 13.0,
+    "inverter_replacement_year": 13,
+    "dsra_months": 6
+  },
+  "ppa_price_base": 60.0,
+  "debt": {
+    "capex": 4260000,
+    "debt": 3408000.0,
+    "equity": 852000.0,
+    "annual_debt_service": 306519.27,
+    "schedule": {
+      "1": {
+        "opening_balance": 3408000.0,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "closing_balance": 3237800.73
+      },
+      "2": {
+        "opening_balance": 3237800.73,
+        "interest": 129512.03,
+        "principal": 177007.24,
+        "debt_service": 306519.27,
+        "closing_balance": 3060793.49
+      },
+      "3": {
+        "opening_balance": 3060793.49,
+        "interest": 122431.74,
+        "principal": 184087.53,
+        "debt_service": 306519.27,
+        "closing_balance": 2876705.96
+      },
+      "4": {
+        "opening_balance": 2876705.96,
+        "interest": 115068.24,
+        "principal": 191451.03,
+        "debt_service": 306519.27,
+        "closing_balance": 2685254.93
+      },
+      "5": {
+        "opening_balance": 2685254.93,
+        "interest": 107410.2,
+        "principal": 199109.07,
+        "debt_service": 306519.27,
+        "closing_balance": 2486145.85
+      },
+      "6": {
+        "opening_balance": 2486145.85,
+        "interest": 99445.83,
+        "principal": 207073.44,
+        "debt_service": 306519.27,
+        "closing_balance": 2279072.42
+      },
+      "7": {
+        "opening_balance": 2279072.42,
+        "interest": 91162.9,
+        "principal": 215356.37,
+        "debt_service": 306519.27,
+        "closing_balance": 2063716.04
+      },
+      "8": {
+        "opening_balance": 2063716.04,
+        "interest": 82548.64,
+        "principal": 223970.63,
+        "debt_service": 306519.27,
+        "closing_balance": 1839745.42
+      },
+      "9": {
+        "opening_balance": 1839745.42,
+        "interest": 73589.82,
+        "principal": 232929.45,
+        "debt_service": 306519.27,
+        "closing_balance": 1606815.96
+      },
+      "10": {
+        "opening_balance": 1606815.96,
+        "interest": 64272.64,
+        "principal": 242246.63,
+        "debt_service": 306519.27,
+        "closing_balance": 1364569.33
+      },
+      "11": {
+        "opening_balance": 1364569.33,
+        "interest": 54582.77,
+        "principal": 251936.5,
+        "debt_service": 306519.27,
+        "closing_balance": 1112632.83
+      },
+      "12": {
+        "opening_balance": 1112632.83,
+        "interest": 44505.31,
+        "principal": 262013.96,
+        "debt_service": 306519.27,
+        "closing_balance": 850618.88
+      },
+      "13": {
+        "opening_balance": 850618.88,
+        "interest": 34024.76,
+        "principal": 272494.51,
+        "debt_service": 306519.27,
+        "closing_balance": 578124.36
+      },
+      "14": {
+        "opening_balance": 578124.36,
+        "interest": 23124.97,
+        "principal": 283394.3,
+        "debt_service": 306519.27,
+        "closing_balance": 294730.07
+      },
+      "15": {
+        "opening_balance": 294730.07,
+        "interest": 11789.2,
+        "principal": 294730.07,
+        "debt_service": 306519.27,
+        "closing_balance": 0.0
+      }
+    }
+  },
+  "production": {
+    "pvgis53_over_pvgis6_energy_ratio": 0.9588,
+    "pbl_calibration_factor": 0.8899,
+    "specific_yield_kwh_per_kwp": {
+      "2021": {
+        "unclipped": 1035.5,
+        "clipped_50pct": 926.4,
+        "clipped_70pct": 1019.0
+      },
+      "2022": {
+        "unclipped": 1209.5,
+        "clipped_50pct": 1045.5,
+        "clipped_70pct": 1181.5
+      },
+      "2023": {
+        "unclipped": 1073.2,
+        "clipped_50pct": 943.4,
+        "clipped_70pct": 1050.4
+      },
+      "2024": {
+        "unclipped": 1033.3,
+        "clipped_50pct": 923.7,
+        "clipped_70pct": 1018.1
+      }
+    },
+    "pbl_full_load_hours_reference": 855,
+    "pbl_year1_equivalent_target": 894.0,
+    "mean_degradation_factor_years_1_15": 0.9564
+  },
+  "validation_vs_stage2": {
+    "2021": {
+      "stage3_unclipped_revenue": 842648.03,
+      "10x_stage2_revenue": 842648.0
+    },
+    "2022": {
+      "stage3_unclipped_revenue": 2581931.3,
+      "10x_stage2_revenue": 2581931.3
+    },
+    "2023": {
+      "stage3_unclipped_revenue": 735366.45,
+      "10x_stage2_revenue": 735366.4
+    },
+    "2024": {
+      "stage3_unclipped_revenue": 437883.84,
+      "10x_stage2_revenue": 437883.8
+    }
+  },
+  "year1": {
+    "2021": {
+      "Merchant \u2013 generate always": {
+        "revenue": 776470.701,
+        "delivered_mwh": 9264.36,
+        "available_mwh": 9264.36,
+        "curtailed_mwh": 0.0,
+        "realised_price": 83.813,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17602.283,
+        "imbalance": 64850.517,
+        "opex_total": 241452.8,
+        "ebitda": 535017.9,
+        "depreciation": 284000.0,
+        "taxable_income": 114697.9,
+        "tax": 29592.058,
+        "maintenance_capex": 10000.0,
+        "cfads": 495425.842,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 1.616,
+        "shortfall": 0.0
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "revenue": 780282.248,
+        "delivered_mwh": 9039.389,
+        "available_mwh": 9264.36,
+        "curtailed_mwh": 224.971,
+        "realised_price": 86.32,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17174.838,
+        "imbalance": 63275.72,
+        "opex_total": 239450.559,
+        "ebitda": 540831.689,
+        "depreciation": 284000.0,
+        "taxable_income": 120511.689,
+        "tax": 31092.016,
+        "maintenance_capex": 10000.0,
+        "cfads": 499739.673,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 1.63,
+        "shortfall": 0.0
+      },
+      "PPA \u2013 no negative-price clause": {
+        "revenue": 555861.575,
+        "delivered_mwh": 9264.36,
+        "available_mwh": 9264.36,
+        "curtailed_mwh": 0.0,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17602.283,
+        "imbalance": 64850.517,
+        "opex_total": 241452.8,
+        "ebitda": 314408.774,
+        "depreciation": 284000.0,
+        "taxable_income": -105911.226,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 304408.774,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 0.993,
+        "shortfall": 2110.496
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "revenue": 542363.316,
+        "delivered_mwh": 9039.389,
+        "available_mwh": 9264.36,
+        "curtailed_mwh": 224.971,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17174.838,
+        "imbalance": 63275.72,
+        "opex_total": 239450.559,
+        "ebitda": 302912.757,
+        "depreciation": 284000.0,
+        "taxable_income": -117407.243,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 292912.757,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 0.956,
+        "shortfall": 13606.513
+      }
+    },
+    "2022": {
+      "Merchant \u2013 generate always": {
+        "revenue": 2306647.491,
+        "delivered_mwh": 10455.477,
+        "available_mwh": 10455.477,
+        "curtailed_mwh": 0.0,
+        "realised_price": 220.616,
+        "fixed_opex": 159000.0,
+        "variable_opex": 19865.406,
+        "imbalance": 73188.339,
+        "opex_total": 252053.745,
+        "ebitda": 2054593.746,
+        "depreciation": 284000.0,
+        "taxable_income": 1634273.746,
+        "tax": 421642.626,
+        "maintenance_capex": 10000.0,
+        "cfads": 1622951.119,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 5.295,
+        "shortfall": 0.0
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "revenue": 2320865.169,
+        "delivered_mwh": 10132.239,
+        "available_mwh": 10455.477,
+        "curtailed_mwh": 323.238,
+        "realised_price": 229.057,
+        "fixed_opex": 159000.0,
+        "variable_opex": 19251.255,
+        "imbalance": 70925.676,
+        "opex_total": 249176.931,
+        "ebitda": 2071688.238,
+        "depreciation": 284000.0,
+        "taxable_income": 1651368.238,
+        "tax": 426053.005,
+        "maintenance_capex": 10000.0,
+        "cfads": 1635635.233,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 5.336,
+        "shortfall": 0.0
+      },
+      "PPA \u2013 no negative-price clause": {
+        "revenue": 627328.62,
+        "delivered_mwh": 10455.477,
+        "available_mwh": 10455.477,
+        "curtailed_mwh": 0.0,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 19865.406,
+        "imbalance": 73188.339,
+        "opex_total": 252053.745,
+        "ebitda": 375274.875,
+        "depreciation": 284000.0,
+        "taxable_income": -45045.125,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 365274.875,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 1.192,
+        "shortfall": 0.0
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "revenue": 607934.365,
+        "delivered_mwh": 10132.239,
+        "available_mwh": 10455.477,
+        "curtailed_mwh": 323.238,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 19251.255,
+        "imbalance": 70925.676,
+        "opex_total": 249176.931,
+        "ebitda": 358757.434,
+        "depreciation": 284000.0,
+        "taxable_income": -61562.566,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 348757.434,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 1.138,
+        "shortfall": 0.0
+      }
+    },
+    "2023": {
+      "Merchant \u2013 generate always": {
+        "revenue": 679779.292,
+        "delivered_mwh": 9433.507,
+        "available_mwh": 9433.507,
+        "curtailed_mwh": 0.0,
+        "realised_price": 72.06,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17923.663,
+        "imbalance": 66034.547,
+        "opex_total": 242958.209,
+        "ebitda": 436821.083,
+        "depreciation": 284000.0,
+        "taxable_income": 16501.083,
+        "tax": 4257.279,
+        "maintenance_capex": 10000.0,
+        "cfads": 422563.804,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 1.379,
+        "shortfall": 0.0
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "revenue": 716850.215,
+        "delivered_mwh": 8542.287,
+        "available_mwh": 9433.507,
+        "curtailed_mwh": 891.219,
+        "realised_price": 83.918,
+        "fixed_opex": 159000.0,
+        "variable_opex": 16230.346,
+        "imbalance": 59796.011,
+        "opex_total": 235026.357,
+        "ebitda": 481823.858,
+        "depreciation": 284000.0,
+        "taxable_income": 61503.858,
+        "tax": 15867.995,
+        "maintenance_capex": 10000.0,
+        "cfads": 455955.863,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 1.488,
+        "shortfall": 0.0
+      },
+      "PPA \u2013 no negative-price clause": {
+        "revenue": 566010.401,
+        "delivered_mwh": 9433.507,
+        "available_mwh": 9433.507,
+        "curtailed_mwh": 0.0,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17923.663,
+        "imbalance": 66034.547,
+        "opex_total": 242958.209,
+        "ebitda": 323052.191,
+        "depreciation": 284000.0,
+        "taxable_income": -97267.809,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 313052.191,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 1.021,
+        "shortfall": 0.0
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "revenue": 512537.235,
+        "delivered_mwh": 8542.287,
+        "available_mwh": 9433.507,
+        "curtailed_mwh": 891.219,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 16230.346,
+        "imbalance": 59796.011,
+        "opex_total": 235026.357,
+        "ebitda": 277510.879,
+        "depreciation": 284000.0,
+        "taxable_income": -142809.121,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 267510.879,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 0.873,
+        "shortfall": 39008.391
+      }
+    },
+    "2024": {
+      "Merchant \u2013 generate always": {
+        "revenue": 423597.668,
+        "delivered_mwh": 9236.823,
+        "available_mwh": 9236.823,
+        "curtailed_mwh": 0.0,
+        "realised_price": 45.86,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17549.964,
+        "imbalance": 64657.762,
+        "opex_total": 241207.726,
+        "ebitda": 182389.942,
+        "depreciation": 284000.0,
+        "taxable_income": -237930.058,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 172389.942,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 0.562,
+        "shortfall": 134129.328
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "revenue": 460772.725,
+        "delivered_mwh": 7562.573,
+        "available_mwh": 9236.823,
+        "curtailed_mwh": 1674.25,
+        "realised_price": 60.928,
+        "fixed_opex": 159000.0,
+        "variable_opex": 14368.889,
+        "imbalance": 52938.011,
+        "opex_total": 226306.899,
+        "ebitda": 234465.825,
+        "depreciation": 284000.0,
+        "taxable_income": -185854.175,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 224465.825,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 0.732,
+        "shortfall": 82053.445
+      },
+      "PPA \u2013 no negative-price clause": {
+        "revenue": 554209.388,
+        "delivered_mwh": 9236.823,
+        "available_mwh": 9236.823,
+        "curtailed_mwh": 0.0,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 17549.964,
+        "imbalance": 64657.762,
+        "opex_total": 241207.726,
+        "ebitda": 313001.662,
+        "depreciation": 284000.0,
+        "taxable_income": -107318.338,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 303001.662,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 0.989,
+        "shortfall": 3517.608
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "revenue": 453754.378,
+        "delivered_mwh": 7562.573,
+        "available_mwh": 9236.823,
+        "curtailed_mwh": 1674.25,
+        "realised_price": 60.0,
+        "fixed_opex": 159000.0,
+        "variable_opex": 14368.889,
+        "imbalance": 52938.011,
+        "opex_total": 226306.899,
+        "ebitda": 227447.479,
+        "depreciation": 284000.0,
+        "taxable_income": -192872.521,
+        "tax": 0.0,
+        "maintenance_capex": 10000.0,
+        "cfads": 217447.479,
+        "interest": 136320.0,
+        "principal": 170199.27,
+        "debt_service": 306519.27,
+        "dscr": 0.709,
+        "shortfall": 89071.791
+      }
+    }
+  },
+  "scaling_benchmark_dscr": {
+    "1 MWp, no grid cap (benchmark)": {
+      "2021": {
+        "Merchant \u2013 generate always": 1.753,
+        "Merchant \u2013 idealised curtailment at p<0": 1.771,
+        "PPA \u2013 no negative-price clause": 1.175,
+        "PPA \u2013 no payment & curtail at p<0": 1.127
+      },
+      "2022": {
+        "Merchant \u2013 generate always": 5.926,
+        "Merchant \u2013 idealised curtailment at p<0": 5.987,
+        "PPA \u2013 no negative-price clause": 1.432,
+        "PPA \u2013 no payment & curtail at p<0": 1.378
+      },
+      "2023": {
+        "Merchant \u2013 generate always": 1.485,
+        "Merchant \u2013 idealised curtailment at p<0": 1.63,
+        "PPA \u2013 no negative-price clause": 1.238,
+        "PPA \u2013 no payment & curtail at p<0": 1.046
+      },
+      "2024": {
+        "Merchant \u2013 generate always": 0.577,
+        "Merchant \u2013 idealised curtailment at p<0": 0.803,
+        "PPA \u2013 no negative-price clause": 1.171,
+        "PPA \u2013 no payment & curtail at p<0": 0.822
+      }
+    },
+    "10 MWp, no grid cap (benchmark)": {
+      "2021": {
+        "Merchant \u2013 generate always": 1.753,
+        "Merchant \u2013 idealised curtailment at p<0": 1.771,
+        "PPA \u2013 no negative-price clause": 1.175,
+        "PPA \u2013 no payment & curtail at p<0": 1.127
+      },
+      "2022": {
+        "Merchant \u2013 generate always": 5.926,
+        "Merchant \u2013 idealised curtailment at p<0": 5.987,
+        "PPA \u2013 no negative-price clause": 1.432,
+        "PPA \u2013 no payment & curtail at p<0": 1.378
+      },
+      "2023": {
+        "Merchant \u2013 generate always": 1.485,
+        "Merchant \u2013 idealised curtailment at p<0": 1.63,
+        "PPA \u2013 no negative-price clause": 1.238,
+        "PPA \u2013 no payment & curtail at p<0": 1.046
+      },
+      "2024": {
+        "Merchant \u2013 generate always": 0.577,
+        "Merchant \u2013 idealised curtailment at p<0": 0.803,
+        "PPA \u2013 no negative-price clause": 1.171,
+        "PPA \u2013 no payment & curtail at p<0": 0.822
+      }
+    },
+    "10 MWp, 70% grid cap (+17 \u20ac/kWp)": {
+      "2021": {
+        "Merchant \u2013 generate always": 1.684,
+        "Merchant \u2013 idealised curtailment at p<0": 1.7,
+        "PPA \u2013 no negative-price clause": 1.103,
+        "PPA \u2013 no payment & curtail at p<0": 1.06
+      },
+      "2022": {
+        "Merchant \u2013 generate always": 5.631,
+        "Merchant \u2013 idealised curtailment at p<0": 5.684,
+        "PPA \u2013 no negative-price clause": 1.358,
+        "PPA \u2013 no payment & curtail at p<0": 1.298
+      },
+      "2023": {
+        "Merchant \u2013 generate always": 1.434,
+        "Merchant \u2013 idealised curtailment at p<0": 1.562,
+        "PPA \u2013 no negative-price clause": 1.154,
+        "PPA \u2013 no payment & curtail at p<0": 0.98
+      },
+      "2024": {
+        "Merchant \u2013 generate always": 0.562,
+        "Merchant \u2013 idealised curtailment at p<0": 0.766,
+        "PPA \u2013 no negative-price clause": 1.102,
+        "PPA \u2013 no payment & curtail at p<0": 0.78
+      }
+    },
+    "10 MWp, 50% grid cap (base)": {
+      "2021": {
+        "Merchant \u2013 generate always": 1.616,
+        "Merchant \u2013 idealised curtailment at p<0": 1.63,
+        "PPA \u2013 no negative-price clause": 0.993,
+        "PPA \u2013 no payment & curtail at p<0": 0.956
+      },
+      "2022": {
+        "Merchant \u2013 generate always": 5.295,
+        "Merchant \u2013 idealised curtailment at p<0": 5.336,
+        "PPA \u2013 no negative-price clause": 1.192,
+        "PPA \u2013 no payment & curtail at p<0": 1.138
+      },
+      "2023": {
+        "Merchant \u2013 generate always": 1.379,
+        "Merchant \u2013 idealised curtailment at p<0": 1.488,
+        "PPA \u2013 no negative-price clause": 1.021,
+        "PPA \u2013 no payment & curtail at p<0": 0.873
+      },
+      "2024": {
+        "Merchant \u2013 generate always": 0.562,
+        "Merchant \u2013 idealised curtailment at p<0": 0.732,
+        "PPA \u2013 no negative-price clause": 0.989,
+        "PPA \u2013 no payment & curtail at p<0": 0.709
+      }
+    }
+  },
+  "production_uncertainty": {
+    "PVGIS 6 (base)": {
+      "2021": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 9264.36,
+          "revenue": 776470.701,
+          "cfads": 495425.842,
+          "dscr": 1.616
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 9039.389,
+          "revenue": 780282.248,
+          "cfads": 499739.673,
+          "dscr": 1.63
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 9264.36,
+          "revenue": 555861.575,
+          "cfads": 304408.774,
+          "dscr": 0.993
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 9039.389,
+          "revenue": 542363.316,
+          "cfads": 292912.757,
+          "dscr": 0.956
+        }
+      },
+      "2022": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 10455.477,
+          "revenue": 2306647.491,
+          "cfads": 1622951.119,
+          "dscr": 5.295
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 10132.239,
+          "revenue": 2320865.169,
+          "cfads": 1635635.233,
+          "dscr": 5.336
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 10455.477,
+          "revenue": 627328.62,
+          "cfads": 365274.875,
+          "dscr": 1.192
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 10132.239,
+          "revenue": 607934.365,
+          "cfads": 348757.434,
+          "dscr": 1.138
+        }
+      },
+      "2023": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 9433.507,
+          "revenue": 679779.292,
+          "cfads": 422563.804,
+          "dscr": 1.379
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 8542.287,
+          "revenue": 716850.215,
+          "cfads": 455955.863,
+          "dscr": 1.488
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 9433.507,
+          "revenue": 566010.401,
+          "cfads": 313052.191,
+          "dscr": 1.021
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 8542.287,
+          "revenue": 512537.235,
+          "cfads": 267510.879,
+          "dscr": 0.873
+        }
+      },
+      "2024": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 9236.823,
+          "revenue": 423597.668,
+          "cfads": 172389.942,
+          "dscr": 0.562
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 7562.573,
+          "revenue": 460772.725,
+          "cfads": 224465.825,
+          "dscr": 0.732
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 9236.823,
+          "revenue": 554209.388,
+          "cfads": 303001.662,
+          "dscr": 0.989
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 7562.573,
+          "revenue": 453754.378,
+          "cfads": 217447.479,
+          "dscr": 0.709
+        }
+      }
+    },
+    "PVGIS 5.3 level": {
+      "2021": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 9029.105,
+          "revenue": 754483.128,
+          "cfads": 480664.638,
+          "dscr": 1.568
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 8807.491,
+          "revenue": 758234.528,
+          "cfads": 484911.674,
+          "dscr": 1.582
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 9029.105,
+          "revenue": 541746.294,
+          "cfads": 292387.26,
+          "dscr": 0.954
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 8807.491,
+          "revenue": 528449.432,
+          "cfads": 281062.766,
+          "dscr": 0.917
+        }
+      },
+      "2022": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 10222.771,
+          "revenue": 2248085.963,
+          "cfads": 1581035.212,
+          "dscr": 5.158
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 9902.315,
+          "revenue": 2262266.278,
+          "cfads": 1593673.234,
+          "dscr": 5.199
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 10222.771,
+          "revenue": 613366.232,
+          "cfads": 353383.574,
+          "dscr": 1.153
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 9902.315,
+          "revenue": 594138.874,
+          "cfads": 337008.274,
+          "dscr": 1.099
+        }
+      },
+      "2023": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 9200.979,
+          "revenue": 660080.877,
+          "cfads": 409192.166,
+          "dscr": 1.335
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 8323.725,
+          "revenue": 696631.557,
+          "cfads": 442396.959,
+          "dscr": 1.443
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 9200.979,
+          "revenue": 552058.726,
+          "cfads": 301170.015,
+          "dscr": 0.983
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 8323.725,
+          "revenue": 499423.503,
+          "cfads": 256342.35,
+          "dscr": 0.836
+        }
+      },
+      "2024": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 9004.697,
+          "revenue": 409629.22,
+          "cfads": 160487.413,
+          "dscr": 0.524
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 7355.096,
+          "revenue": 446463.579,
+          "cfads": 212003.225,
+          "dscr": 0.692
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 9004.697,
+          "revenue": 540281.848,
+          "cfads": 291140.04,
+          "dscr": 0.95
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 7355.096,
+          "revenue": 441305.759,
+          "cfads": 206845.405,
+          "dscr": 0.675
+        }
+      }
+    },
+    "PBL 855 h calibrated": {
+      "2021": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 8600.562,
+          "revenue": 714749.19,
+          "cfads": 454012.07,
+          "dscr": 1.481
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 8384.967,
+          "revenue": 718397.18,
+          "cfads": 458142.625,
+          "dscr": 1.495
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 8600.562,
+          "revenue": 516033.704,
+          "cfads": 270488.704,
+          "dscr": 0.882
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 8384.967,
+          "revenue": 503098.001,
+          "cfads": 259471.798,
+          "dscr": 0.847
+        }
+      },
+      "2022": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 9795.816,
+          "revenue": 2142298.29,
+          "cfads": 1505360.28,
+          "dscr": 4.911
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 9480.97,
+          "revenue": 2156410.251,
+          "cfads": 1517910.538,
+          "dscr": 4.952
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 9795.816,
+          "revenue": 587748.976,
+          "cfads": 331566.211,
+          "dscr": 1.082
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 9480.97,
+          "revenue": 568858.193,
+          "cfads": 315477.561,
+          "dscr": 1.029
+        }
+      },
+      "2023": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 8780.637,
+          "revenue": 624878.215,
+          "cfads": 377730.547,
+          "dscr": 1.232
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 7928.09,
+          "revenue": 660454.416,
+          "cfads": 418166.218,
+          "dscr": 1.364
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 8780.637,
+          "revenue": 526838.209,
+          "cfads": 279690.542,
+          "dscr": 0.912
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 7928.09,
+          "revenue": 475685.386,
+          "cfads": 236125.387,
+          "dscr": 0.77
+        }
+      },
+      "2024": {
+        "Merchant \u2013 generate always": {
+          "delivered_mwh": 8581.386,
+          "revenue": 384780.144,
+          "cfads": 139405.81,
+          "dscr": 0.455
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "delivered_mwh": 6979.168,
+          "revenue": 420940.082,
+          "cfads": 189825.487,
+          "dscr": 0.619
+        },
+        "PPA \u2013 no negative-price clause": {
+          "delivered_mwh": 8581.386,
+          "revenue": 514883.147,
+          "cfads": 269508.814,
+          "dscr": 0.879
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "delivered_mwh": 6979.168,
+          "revenue": 418750.076,
+          "cfads": 187635.481,
+          "dscr": 0.612
+        }
+      }
+    }
+  },
+  "stress_dscr": {
+    "2021": {
+      "Merchant \u2013 generate always": {
+        "Base": 1.616,
+        "Production: PVGIS 5.3 level": 1.568,
+        "Production: PBL-calibrated": 1.481,
+        "Production \u221210 %": 1.494,
+        "Opex +20 %": 1.499,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 1.367,
+        "Land lease 5 \u20ac/kWp/yr": 1.495,
+        "Interest +200 bp": 1.462,
+        "Gearing 60 %": 2.117,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.684,
+        "Prices \u221220 %": 1.206,
+        "Prices +20 %": 1.992,
+        "Negative-price hours doubled": 1.612
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "Base": 1.63,
+        "Production: PVGIS 5.3 level": 1.582,
+        "Production: PBL-calibrated": 1.495,
+        "Production \u221210 %": 1.508,
+        "Opex +20 %": 1.514,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 1.387,
+        "Land lease 5 \u20ac/kWp/yr": 1.509,
+        "Interest +200 bp": 1.474,
+        "Gearing 60 %": 2.136,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.7,
+        "Prices \u221220 %": 1.223,
+        "Prices +20 %": 2.008,
+        "Negative-price hours doubled": 1.633
+      },
+      "PPA \u2013 no negative-price clause": {
+        "Base": 0.993,
+        "Production: PVGIS 5.3 level": 0.954,
+        "Production: PBL-calibrated": 0.882,
+        "Production \u221210 %": 0.893,
+        "Opex +20 %": 0.836,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.658,
+        "Land lease 5 \u20ac/kWp/yr": 0.83,
+        "Interest +200 bp": 0.868,
+        "Gearing 60 %": 1.324,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.103,
+        "PPA price 50 \u20ac/MWh": 0.691,
+        "PPA price 70 \u20ac/MWh": 1.295,
+        "Negative-price hours doubled": 0.993
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "Base": 0.956,
+        "Production: PVGIS 5.3 level": 0.917,
+        "Production: PBL-calibrated": 0.847,
+        "Production \u221210 %": 0.857,
+        "Opex +20 %": 0.799,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.628,
+        "Land lease 5 \u20ac/kWp/yr": 0.792,
+        "Interest +200 bp": 0.835,
+        "Gearing 60 %": 1.274,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.06,
+        "PPA price 50 \u20ac/MWh": 0.661,
+        "PPA price 70 \u20ac/MWh": 1.251,
+        "Negative-price hours doubled": 0.936
+      }
+    },
+    "2022": {
+      "Merchant \u2013 generate always": {
+        "Base": 5.295,
+        "Production: PVGIS 5.3 level": 5.158,
+        "Production: PBL-calibrated": 4.911,
+        "Production \u221210 %": 4.949,
+        "Opex +20 %": 5.173,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 5.014,
+        "Land lease 5 \u20ac/kWp/yr": 5.174,
+        "Interest +200 bp": 4.675,
+        "Gearing 60 %": 7.021,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 5.631,
+        "Prices \u221220 %": 4.178,
+        "Prices +20 %": 6.412,
+        "Negative-price hours doubled": 5.276
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "Base": 5.336,
+        "Production: PVGIS 5.3 level": 5.199,
+        "Production: PBL-calibrated": 4.952,
+        "Production \u221210 %": 4.99,
+        "Opex +20 %": 5.216,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 5.064,
+        "Land lease 5 \u20ac/kWp/yr": 5.215,
+        "Interest +200 bp": 4.711,
+        "Gearing 60 %": 7.077,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 5.684,
+        "Prices \u221220 %": 4.213,
+        "Prices +20 %": 6.46,
+        "Negative-price hours doubled": 5.34
+      },
+      "PPA \u2013 no negative-price clause": {
+        "Base": 1.192,
+        "Production: PVGIS 5.3 level": 1.153,
+        "Production: PBL-calibrated": 1.082,
+        "Production \u221210 %": 1.093,
+        "Opex +20 %": 1.027,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.813,
+        "Land lease 5 \u20ac/kWp/yr": 1.029,
+        "Interest +200 bp": 1.041,
+        "Gearing 60 %": 1.589,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.358,
+        "PPA price 50 \u20ac/MWh": 0.851,
+        "PPA price 70 \u20ac/MWh": 1.483,
+        "Negative-price hours doubled": 1.192
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "Base": 1.138,
+        "Production: PVGIS 5.3 level": 1.099,
+        "Production: PBL-calibrated": 1.029,
+        "Production \u221210 %": 1.04,
+        "Opex +20 %": 0.975,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.771,
+        "Land lease 5 \u20ac/kWp/yr": 0.975,
+        "Interest +200 bp": 0.994,
+        "Gearing 60 %": 1.517,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.298,
+        "PPA price 50 \u20ac/MWh": 0.807,
+        "PPA price 70 \u20ac/MWh": 1.435,
+        "Negative-price hours doubled": 1.102
+      }
+    },
+    "2023": {
+      "Merchant \u2013 generate always": {
+        "Base": 1.379,
+        "Production: PVGIS 5.3 level": 1.335,
+        "Production: PBL-calibrated": 1.232,
+        "Production \u221210 %": 1.248,
+        "Opex +20 %": 1.234,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 1.051,
+        "Land lease 5 \u20ac/kWp/yr": 1.229,
+        "Interest +200 bp": 1.216,
+        "Gearing 60 %": 1.8,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.434,
+        "Prices \u221220 %": 0.949,
+        "Prices +20 %": 1.708,
+        "Negative-price hours doubled": 1.343
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "Base": 1.488,
+        "Production: PVGIS 5.3 level": 1.443,
+        "Production: PBL-calibrated": 1.364,
+        "Production \u221210 %": 1.376,
+        "Opex +20 %": 1.374,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 1.23,
+        "Land lease 5 \u20ac/kWp/yr": 1.366,
+        "Interest +200 bp": 1.345,
+        "Gearing 60 %": 1.945,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.562,
+        "Prices \u221220 %": 1.072,
+        "Prices +20 %": 1.835,
+        "Negative-price hours doubled": 1.495
+      },
+      "PPA \u2013 no negative-price clause": {
+        "Base": 1.021,
+        "Production: PVGIS 5.3 level": 0.983,
+        "Production: PBL-calibrated": 0.912,
+        "Production \u221210 %": 0.923,
+        "Opex +20 %": 0.863,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.68,
+        "Land lease 5 \u20ac/kWp/yr": 0.858,
+        "Interest +200 bp": 0.892,
+        "Gearing 60 %": 1.362,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.154,
+        "PPA price 50 \u20ac/MWh": 0.714,
+        "PPA price 70 \u20ac/MWh": 1.329,
+        "Negative-price hours doubled": 1.021
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "Base": 0.873,
+        "Production: PVGIS 5.3 level": 0.836,
+        "Production: PBL-calibrated": 0.77,
+        "Production \u221210 %": 0.78,
+        "Opex +20 %": 0.719,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.563,
+        "Land lease 5 \u20ac/kWp/yr": 0.71,
+        "Interest +200 bp": 0.762,
+        "Gearing 60 %": 1.164,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 0.98,
+        "PPA price 50 \u20ac/MWh": 0.594,
+        "PPA price 70 \u20ac/MWh": 1.151,
+        "Negative-price hours doubled": 0.787
+      }
+    },
+    "2024": {
+      "Merchant \u2013 generate always": {
+        "Base": 0.562,
+        "Production: PVGIS 5.3 level": 0.524,
+        "Production: PBL-calibrated": 0.455,
+        "Production \u221210 %": 0.465,
+        "Opex +20 %": 0.405,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.228,
+        "Land lease 5 \u20ac/kWp/yr": 0.399,
+        "Interest +200 bp": 0.491,
+        "Gearing 60 %": 0.75,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 0.562,
+        "Prices \u221220 %": 0.286,
+        "Prices +20 %": 0.839,
+        "Negative-price hours doubled": 0.495
+      },
+      "Merchant \u2013 idealised curtailment at p<0": {
+        "Base": 0.732,
+        "Production: PVGIS 5.3 level": 0.692,
+        "Production: PBL-calibrated": 0.619,
+        "Production \u221210 %": 0.63,
+        "Opex +20 %": 0.585,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.458,
+        "Land lease 5 \u20ac/kWp/yr": 0.569,
+        "Interest +200 bp": 0.64,
+        "Gearing 60 %": 0.976,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 0.766,
+        "Prices \u221220 %": 0.432,
+        "Prices +20 %": 1.033,
+        "Negative-price hours doubled": 0.75
+      },
+      "PPA \u2013 no negative-price clause": {
+        "Base": 0.989,
+        "Production: PVGIS 5.3 level": 0.95,
+        "Production: PBL-calibrated": 0.879,
+        "Production \u221210 %": 0.89,
+        "Opex +20 %": 0.831,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.654,
+        "Land lease 5 \u20ac/kWp/yr": 0.825,
+        "Interest +200 bp": 0.864,
+        "Gearing 60 %": 1.318,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 1.102,
+        "PPA price 50 \u20ac/MWh": 0.687,
+        "PPA price 70 \u20ac/MWh": 1.29,
+        "Negative-price hours doubled": 0.989
+      },
+      "PPA \u2013 no payment & curtail at p<0": {
+        "Base": 0.709,
+        "Production: PVGIS 5.3 level": 0.675,
+        "Production: PBL-calibrated": 0.612,
+        "Production \u221210 %": 0.622,
+        "Opex +20 %": 0.562,
+        "Imbalance 18.1 \u20ac/MWh (2023 level)": 0.436,
+        "Land lease 5 \u20ac/kWp/yr": 0.546,
+        "Interest +200 bp": 0.62,
+        "Gearing 60 %": 0.946,
+        "Grid cap 70 % (+17 \u20ac/kWp capex)": 0.78,
+        "PPA price 50 \u20ac/MWh": 0.463,
+        "PPA price 70 \u20ac/MWh": 0.956,
+        "Negative-price hours doubled": 0.551
+      }
+    }
+  },
+  "breakeven": {
+    "2021": {
+      "merchant_capture_price_clipped": 83.81,
+      "ppa_price_for_dscr_1.0_none": 60.23,
+      "ppa_price_for_dscr_1.0_no_payment_and_curtail": 61.51,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 generate always": 0.719,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 generate always": 60.23,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 0.713,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 59.72,
+      "ppa_price_for_dscr_1.2_none": 66.84,
+      "ppa_price_for_dscr_1.2_no_payment_and_curtail": 68.29,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 generate always": 0.798,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 generate always": 66.84,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 0.791,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 66.3,
+      "production_factor_for_dscr_1_Merchant \u2013 generate always": 0.634,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 generate always": 1.0,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 generate always": 0.867,
+      "production_factor_for_dscr_1_Merchant \u2013 idealised curtailment at p<0": 0.628,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 1.0,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 idealised curtailment at p<0": 0.875,
+      "production_factor_for_dscr_1_PPA \u2013 no negative-price clause": 1.007,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no negative-price clause": 0.662,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no negative-price clause": 0.53,
+      "production_factor_for_dscr_1_PPA \u2013 no payment & curtail at p<0": 1.05,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no payment & curtail at p<0": 0.637,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no payment & curtail at p<0": 0.51
+    },
+    "2022": {
+      "merchant_capture_price_clipped": 220.62,
+      "ppa_price_for_dscr_1.0_none": 54.38,
+      "ppa_price_for_dscr_1.0_no_payment_and_curtail": 55.83,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 generate always": 0.246,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 generate always": 54.38,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 0.244,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 53.77,
+      "ppa_price_for_dscr_1.2_none": 60.24,
+      "ppa_price_for_dscr_1.2_no_payment_and_curtail": 61.88,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 generate always": 0.273,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 generate always": 60.24,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 0.27,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 59.6,
+      "production_factor_for_dscr_1_Merchant \u2013 generate always": 0.192,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 generate always": 1.0,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 generate always": 1.0,
+      "production_factor_for_dscr_1_Merchant \u2013 idealised curtailment at p<0": 0.19,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 1.0,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 idealised curtailment at p<0": 1.0,
+      "production_factor_for_dscr_1_PPA \u2013 no negative-price clause": 0.82,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no negative-price clause": 0.794,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no negative-price clause": 0.636,
+      "production_factor_for_dscr_1_PPA \u2013 no payment & curtail at p<0": 0.864,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no payment & curtail at p<0": 0.759,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no payment & curtail at p<0": 0.607
+    },
+    "2023": {
+      "merchant_capture_price_clipped": 72.06,
+      "ppa_price_for_dscr_1.0_none": 59.31,
+      "ppa_price_for_dscr_1.0_no_payment_and_curtail": 64.57,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 generate always": 0.823,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 generate always": 59.31,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 0.769,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 55.44,
+      "ppa_price_for_dscr_1.2_none": 65.8,
+      "ppa_price_for_dscr_1.2_no_payment_and_curtail": 71.74,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 generate always": 0.913,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 generate always": 65.81,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 0.855,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 61.61,
+      "production_factor_for_dscr_1_Merchant \u2013 generate always": 0.751,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 generate always": 0.928,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 generate always": 0.73,
+      "production_factor_for_dscr_1_Merchant \u2013 idealised curtailment at p<0": 0.685,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 1.0,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 idealised curtailment at p<0": 0.793,
+      "production_factor_for_dscr_1_PPA \u2013 no negative-price clause": 0.977,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no negative-price clause": 0.681,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no negative-price clause": 0.545,
+      "production_factor_for_dscr_1_PPA \u2013 no payment & curtail at p<0": 1.167,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no payment & curtail at p<0": 0.582,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no payment & curtail at p<0": 0.465
+    },
+    "2024": {
+      "merchant_capture_price_clipped": 45.86,
+      "ppa_price_for_dscr_1.0_none": 60.38,
+      "ppa_price_for_dscr_1.0_no_payment_and_curtail": 71.78,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 generate always": 1.317,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 generate always": 60.38,
+      "price_multiplier_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 1.178,
+      "required_capture_price_for_dscr_1.0_Merchant \u2013 idealised curtailment at p<0": 54.03,
+      "ppa_price_for_dscr_1.2_none": 67.02,
+      "ppa_price_for_dscr_1.2_no_payment_and_curtail": 79.89,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 generate always": 1.461,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 generate always": 67.02,
+      "price_multiplier_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 1.311,
+      "required_capture_price_for_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 60.13,
+      "production_factor_for_dscr_1_Merchant \u2013 generate always": 1.586,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 generate always": 0.375,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 generate always": 0.3,
+      "production_factor_for_dscr_1_Merchant \u2013 idealised curtailment at p<0": 1.317,
+      "max_gearing_at_dscr_1.2_Merchant \u2013 idealised curtailment at p<0": 0.488,
+      "max_gearing_at_dscr_1.5_Merchant \u2013 idealised curtailment at p<0": 0.391,
+      "production_factor_for_dscr_1_PPA \u2013 no negative-price clause": 1.013,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no negative-price clause": 0.659,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no negative-price clause": 0.527,
+      "production_factor_for_dscr_1_PPA \u2013 no payment & curtail at p<0": 1.449,
+      "max_gearing_at_dscr_1.2_PPA \u2013 no payment & curtail at p<0": 0.473,
+      "max_gearing_at_dscr_1.5_PPA \u2013 no payment & curtail at p<0": 0.378
+    }
+  },
+  "breakeven_ppa_vs_gearing": {
+    "2021": {
+      "0.5": {
+        "1.0": 47.82,
+        "1.2": 51.96
+      },
+      "0.6": {
+        "1.0": 51.96,
+        "1.2": 56.92
+      },
+      "0.7": {
+        "1.0": 56.09,
+        "1.2": 61.88
+      },
+      "0.8": {
+        "1.0": 60.23,
+        "1.2": 66.84
+      }
+    },
+    "2022": {
+      "0.5": {
+        "1.0": 43.39,
+        "1.2": 47.05
+      },
+      "0.6": {
+        "1.0": 47.05,
+        "1.2": 51.45
+      },
+      "0.7": {
+        "1.0": 50.72,
+        "1.2": 55.85
+      },
+      "0.8": {
+        "1.0": 54.38,
+        "1.2": 60.24
+      }
+    },
+    "2023": {
+      "0.5": {
+        "1.0": 47.12,
+        "1.2": 51.19
+      },
+      "0.6": {
+        "1.0": 51.19,
+        "1.2": 56.06
+      },
+      "0.7": {
+        "1.0": 55.24,
+        "1.2": 60.93
+      },
+      "0.8": {
+        "1.0": 59.31,
+        "1.2": 65.8
+      }
+    },
+    "2024": {
+      "0.5": {
+        "1.0": 47.94,
+        "1.2": 52.09
+      },
+      "0.6": {
+        "1.0": 52.09,
+        "1.2": 57.06
+      },
+      "0.7": {
+        "1.0": 56.23,
+        "1.2": 62.04
+      },
+      "0.8": {
+        "1.0": 60.38,
+        "1.2": 67.02
+      }
+    }
+  },
+  "breakeven_ppa_by_production_case": {
+    "PVGIS 6 (base)": {
+      "2021": {
+        "1.0": 60.23,
+        "1.2": 66.84
+      },
+      "2022": {
+        "1.0": 54.38,
+        "1.2": 60.24
+      },
+      "2023": {
+        "1.0": 59.31,
+        "1.2": 65.8
+      },
+      "2024": {
+        "1.0": 60.38,
+        "1.2": 67.02
+      }
+    },
+    "PVGIS 5.3 level": {
+      "2021": {
+        "1.0": 61.57,
+        "1.2": 68.35
+      },
+      "2022": {
+        "1.0": 55.42,
+        "1.2": 61.41
+      },
+      "2023": {
+        "1.0": 60.58,
+        "1.2": 67.25
+      },
+      "2024": {
+        "1.0": 61.71,
+        "1.2": 68.52
+      }
+    },
+    "PBL 855 h calibrated": {
+      "2021": {
+        "1.0": 64.19,
+        "1.2": 71.32
+      },
+      "2022": {
+        "1.0": 57.44,
+        "1.2": 63.7
+      },
+      "2023": {
+        "1.0": 63.06,
+        "1.2": 70.04
+      },
+      "2024": {
+        "1.0": 64.32,
+        "1.2": 71.46
+      }
+    }
+  },
+  "tenor_stress": {
+    "flat_nominal": {
+      "2021": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.257,
+          "mean_dscr": 1.433,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.272,
+          "mean_dscr": 1.447,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.694,
+          "mean_dscr": 0.837,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 751680.0,
+          "first_year_cum_shortfall_exceeds_dsra": 7
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.66,
+          "mean_dscr": 0.801,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 916881.0,
+          "first_year_cum_shortfall_exceeds_dsra": 6
+        }
+      },
+      "2022": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 4.737,
+          "mean_dscr": 5.013,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 4.78,
+          "mean_dscr": 5.055,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.882,
+          "mean_dscr": 1.03,
+          "years_below_1": 6,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 135837.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.832,
+          "mean_dscr": 0.978,
+          "years_below_1": 8,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 250534.0,
+          "first_year_cum_shortfall_exceeds_dsra": 13
+        }
+      },
+      "2023": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.03,
+          "mean_dscr": 1.201,
+          "years_below_1": 0,
+          "years_below_1_2": 7,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.142,
+          "mean_dscr": 1.311,
+          "years_below_1": 0,
+          "years_below_1_2": 4,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.722,
+          "mean_dscr": 0.864,
+          "years_below_1": 14,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 629583.0,
+          "first_year_cum_shortfall_exceeds_dsra": 9
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.586,
+          "mean_dscr": 0.722,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 1276979.0,
+          "first_year_cum_shortfall_exceeds_dsra": 4
+        }
+      },
+      "2024": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.265,
+          "mean_dscr": 0.407,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 2728735.0,
+          "first_year_cum_shortfall_exceeds_dsra": 2
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.446,
+          "mean_dscr": 0.582,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 1923339.0,
+          "first_year_cum_shortfall_exceeds_dsra": 2
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.691,
+          "mean_dscr": 0.833,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 769940.0,
+          "first_year_cum_shortfall_exceeds_dsra": 7
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.436,
+          "mean_dscr": 0.565,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 1999320.0,
+          "first_year_cum_shortfall_exceeds_dsra": 2
+        }
+      }
+    },
+    "indexed_2pct": {
+      "2021": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.616,
+          "mean_dscr": 1.708,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.63,
+          "mean_dscr": 1.724,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.993,
+          "mean_dscr": 1.088,
+          "years_below_1": 1,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 2110.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.956,
+          "mean_dscr": 1.05,
+          "years_below_1": 4,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 28905.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        }
+      },
+      "2022": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 5.295,
+          "mean_dscr": 5.834,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 5.336,
+          "mean_dscr": 5.881,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.192,
+          "mean_dscr": 1.282,
+          "years_below_1": 0,
+          "years_below_1_2": 1,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.138,
+          "mean_dscr": 1.231,
+          "years_below_1": 0,
+          "years_below_1_2": 4,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        }
+      },
+      "2023": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.379,
+          "mean_dscr": 1.441,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.488,
+          "mean_dscr": 1.565,
+          "years_below_1": 0,
+          "years_below_1_2": 0,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 1.021,
+          "mean_dscr": 1.117,
+          "years_below_1": 0,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 0.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.873,
+          "mean_dscr": 0.964,
+          "years_below_1": 10,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 213501.0,
+          "first_year_cum_shortfall_exceeds_dsra": 5
+        }
+      },
+      "2024": {
+        "Merchant \u2013 generate always": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.562,
+          "mean_dscr": 0.607,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 1805132.0,
+          "first_year_cum_shortfall_exceeds_dsra": 2
+        },
+        "Merchant \u2013 idealised curtailment at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.732,
+          "mean_dscr": 0.801,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 915679.0,
+          "first_year_cum_shortfall_exceeds_dsra": 2
+        },
+        "PPA \u2013 no negative-price clause": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.989,
+          "mean_dscr": 1.084,
+          "years_below_1": 1,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 3518.0,
+          "first_year_cum_shortfall_exceeds_dsra": null
+        },
+        "PPA \u2013 no payment & curtail at p<0": {
+          "dsra_eur": 153260.0,
+          "min_dscr": 0.709,
+          "mean_dscr": 0.782,
+          "years_below_1": 15,
+          "years_below_1_2": 15,
+          "cumulative_shortfall_eur": 1001537.0,
+          "first_year_cum_shortfall_exceeds_dsra": 2
+        }
+      }
+    }
+  },
+  "tenor_dscr_paths": {
+    "flat_nominal": {
+      "2021": {
+        "Merchant \u2013 generate always": [
+          1.616,
+          1.592,
+          1.566,
+          1.541,
+          1.515,
+          1.488,
+          1.461,
+          1.433,
+          1.405,
+          1.377,
+          1.348,
+          1.318,
+          1.287,
+          1.289,
+          1.257
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          1.63,
+          1.606,
+          1.581,
+          1.555,
+          1.529,
+          1.503,
+          1.476,
+          1.448,
+          1.42,
+          1.391,
+          1.362,
+          1.333,
+          1.302,
+          1.304,
+          1.272
+        ],
+        "PPA \u2013 no negative-price clause": [
+          0.993,
+          0.971,
+          0.949,
+          0.927,
+          0.905,
+          0.882,
+          0.859,
+          0.835,
+          0.811,
+          0.787,
+          0.763,
+          0.738,
+          0.713,
+          0.72,
+          0.694
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          0.956,
+          0.934,
+          0.912,
+          0.89,
+          0.868,
+          0.845,
+          0.822,
+          0.799,
+          0.776,
+          0.752,
+          0.728,
+          0.703,
+          0.678,
+          0.685,
+          0.66
+        ]
+      },
+      "2022": {
+        "Merchant \u2013 generate always": [
+          5.295,
+          5.256,
+          5.217,
+          5.178,
+          5.137,
+          5.097,
+          5.055,
+          5.013,
+          4.971,
+          4.928,
+          4.885,
+          4.841,
+          4.796,
+          4.783,
+          4.737
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          5.336,
+          5.298,
+          5.259,
+          5.219,
+          5.179,
+          5.139,
+          5.097,
+          5.056,
+          5.014,
+          4.971,
+          4.928,
+          4.884,
+          4.839,
+          4.826,
+          4.78
+        ],
+        "PPA \u2013 no negative-price clause": [
+          1.192,
+          1.169,
+          1.147,
+          1.124,
+          1.101,
+          1.077,
+          1.053,
+          1.029,
+          1.005,
+          0.98,
+          0.954,
+          0.929,
+          0.903,
+          0.909,
+          0.882
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          1.138,
+          1.116,
+          1.094,
+          1.071,
+          1.048,
+          1.025,
+          1.001,
+          0.977,
+          0.953,
+          0.928,
+          0.903,
+          0.878,
+          0.852,
+          0.859,
+          0.832
+        ]
+      },
+      "2023": {
+        "Merchant \u2013 generate always": [
+          1.379,
+          1.355,
+          1.33,
+          1.305,
+          1.28,
+          1.254,
+          1.228,
+          1.201,
+          1.174,
+          1.146,
+          1.118,
+          1.089,
+          1.059,
+          1.061,
+          1.03
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          1.488,
+          1.464,
+          1.439,
+          1.415,
+          1.39,
+          1.364,
+          1.338,
+          1.311,
+          1.284,
+          1.256,
+          1.228,
+          1.199,
+          1.17,
+          1.173,
+          1.142
+        ],
+        "PPA \u2013 no negative-price clause": [
+          1.021,
+          1.0,
+          0.978,
+          0.955,
+          0.933,
+          0.91,
+          0.887,
+          0.863,
+          0.839,
+          0.815,
+          0.791,
+          0.766,
+          0.741,
+          0.748,
+          0.722
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          0.873,
+          0.852,
+          0.831,
+          0.809,
+          0.788,
+          0.766,
+          0.743,
+          0.721,
+          0.698,
+          0.675,
+          0.651,
+          0.627,
+          0.603,
+          0.611,
+          0.586
+        ]
+      },
+      "2024": {
+        "Merchant \u2013 generate always": [
+          0.562,
+          0.541,
+          0.519,
+          0.497,
+          0.474,
+          0.451,
+          0.428,
+          0.405,
+          0.381,
+          0.357,
+          0.333,
+          0.308,
+          0.284,
+          0.291,
+          0.265
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          0.732,
+          0.711,
+          0.69,
+          0.669,
+          0.647,
+          0.625,
+          0.603,
+          0.58,
+          0.557,
+          0.534,
+          0.511,
+          0.487,
+          0.463,
+          0.471,
+          0.446
+        ],
+        "PPA \u2013 no negative-price clause": [
+          0.989,
+          0.967,
+          0.945,
+          0.923,
+          0.9,
+          0.878,
+          0.855,
+          0.831,
+          0.808,
+          0.783,
+          0.759,
+          0.734,
+          0.709,
+          0.716,
+          0.691
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          0.709,
+          0.689,
+          0.669,
+          0.649,
+          0.628,
+          0.607,
+          0.585,
+          0.564,
+          0.542,
+          0.519,
+          0.497,
+          0.474,
+          0.451,
+          0.46,
+          0.436
+        ]
+      }
+    },
+    "indexed_2pct": {
+      "2021": {
+        "Merchant \u2013 generate always": [
+          1.616,
+          1.629,
+          1.642,
+          1.654,
+          1.667,
+          1.68,
+          1.692,
+          1.705,
+          1.717,
+          1.729,
+          1.741,
+          1.753,
+          1.765,
+          1.81,
+          1.821
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          1.63,
+          1.643,
+          1.656,
+          1.669,
+          1.682,
+          1.695,
+          1.708,
+          1.72,
+          1.733,
+          1.746,
+          1.758,
+          1.77,
+          1.783,
+          1.827,
+          1.839
+        ],
+        "PPA \u2013 no negative-price clause": [
+          0.993,
+          1.008,
+          1.022,
+          1.037,
+          1.052,
+          1.067,
+          1.082,
+          1.097,
+          1.113,
+          1.122,
+          1.126,
+          1.129,
+          1.132,
+          1.168,
+          1.17
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          0.956,
+          0.969,
+          0.983,
+          0.997,
+          1.012,
+          1.026,
+          1.04,
+          1.055,
+          1.07,
+          1.085,
+          1.093,
+          1.095,
+          1.098,
+          1.133,
+          1.135
+        ]
+      },
+      "2022": {
+        "Merchant \u2013 generate always": [
+          5.295,
+          5.368,
+          5.441,
+          5.515,
+          5.59,
+          5.666,
+          5.743,
+          5.821,
+          5.9,
+          5.98,
+          6.06,
+          6.142,
+          6.224,
+          6.339,
+          6.423
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          5.336,
+          5.41,
+          5.484,
+          5.559,
+          5.635,
+          5.712,
+          5.79,
+          5.869,
+          5.948,
+          6.029,
+          6.11,
+          6.193,
+          6.276,
+          6.393,
+          6.478
+        ],
+        "PPA \u2013 no negative-price clause": [
+          1.192,
+          1.21,
+          1.229,
+          1.248,
+          1.261,
+          1.269,
+          1.277,
+          1.284,
+          1.291,
+          1.299,
+          1.306,
+          1.313,
+          1.32,
+          1.359,
+          1.365
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          1.138,
+          1.155,
+          1.173,
+          1.191,
+          1.209,
+          1.225,
+          1.232,
+          1.239,
+          1.245,
+          1.252,
+          1.258,
+          1.264,
+          1.27,
+          1.308,
+          1.314
+        ]
+      },
+      "2023": {
+        "Merchant \u2013 generate always": [
+          1.379,
+          1.387,
+          1.396,
+          1.405,
+          1.413,
+          1.422,
+          1.43,
+          1.438,
+          1.446,
+          1.454,
+          1.462,
+          1.469,
+          1.477,
+          1.517,
+          1.524
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          1.488,
+          1.498,
+          1.509,
+          1.52,
+          1.53,
+          1.541,
+          1.551,
+          1.561,
+          1.572,
+          1.582,
+          1.592,
+          1.602,
+          1.611,
+          1.654,
+          1.663
+        ],
+        "PPA \u2013 no negative-price clause": [
+          1.021,
+          1.036,
+          1.052,
+          1.067,
+          1.083,
+          1.098,
+          1.114,
+          1.13,
+          1.143,
+          1.148,
+          1.152,
+          1.156,
+          1.16,
+          1.196,
+          1.199
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          0.873,
+          0.885,
+          0.898,
+          0.911,
+          0.923,
+          0.936,
+          0.949,
+          0.963,
+          0.976,
+          0.989,
+          1.003,
+          1.017,
+          1.024,
+          1.058,
+          1.058
+        ]
+      },
+      "2024": {
+        "Merchant \u2013 generate always": [
+          0.562,
+          0.568,
+          0.574,
+          0.58,
+          0.586,
+          0.592,
+          0.597,
+          0.603,
+          0.609,
+          0.615,
+          0.621,
+          0.626,
+          0.632,
+          0.67,
+          0.676
+        ],
+        "Merchant \u2013 idealised curtailment at p<0": [
+          0.732,
+          0.741,
+          0.75,
+          0.759,
+          0.768,
+          0.778,
+          0.787,
+          0.796,
+          0.805,
+          0.815,
+          0.824,
+          0.833,
+          0.843,
+          0.885,
+          0.894
+        ],
+        "PPA \u2013 no negative-price clause": [
+          0.989,
+          1.003,
+          1.018,
+          1.032,
+          1.047,
+          1.062,
+          1.077,
+          1.093,
+          1.108,
+          1.119,
+          1.122,
+          1.126,
+          1.129,
+          1.164,
+          1.167
+        ],
+        "PPA \u2013 no payment & curtail at p<0": [
+          0.709,
+          0.719,
+          0.728,
+          0.738,
+          0.748,
+          0.758,
+          0.767,
+          0.777,
+          0.787,
+          0.797,
+          0.807,
+          0.817,
+          0.828,
+          0.87,
+          0.881
+        ]
+      }
+    }
+  },
+  "annuity_vs_sculpted_ppa_none": {
+    "2021": {
+      "1.2": {
+        "annuity_debt": 1971235.0,
+        "sculpted_debt": 2421621.0,
+        "annuity_gearing": 0.463,
+        "sculpted_gearing": 0.568
+      }
+    },
+    "2022": {
+      "1.2": {
+        "annuity_debt": 2505678.0,
+        "sculpted_debt": 2973298.0,
+        "annuity_gearing": 0.588,
+        "sculpted_gearing": 0.698
+      }
+    },
+    "2023": {
+      "1.2": {
+        "annuity_debt": 2050013.0,
+        "sculpted_debt": 2501143.0,
+        "annuity_gearing": 0.481,
+        "sculpted_gearing": 0.587
+      }
+    },
+    "2024": {
+      "1.2": {
+        "annuity_debt": 1961446.0,
+        "sculpted_debt": 2410173.0,
+        "annuity_gearing": 0.46,
+        "sculpted_gearing": 0.566
+      }
+    }
+  },
+  "figures": [
+    "stage3_dscr_year1.png",
+    "stage3_waterfall_2024.png",
+    "stage3_stress_tornado.png",
+    "stage3_breakeven_ppa_vs_gearing.png",
+    "stage3_tenor_paths.png"
+  ]
+}

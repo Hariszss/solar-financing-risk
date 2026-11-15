@@ -1,0 +1,854 @@
+{
+  "price_status": "Prices: Energy-Charts (Bundesnetzagentur | SMARD.de, CC BY 4.0); not independently cross-checked against ENTSO-E",
+  "system": "1000 kWp hypothetical test system",
+  "primary_production_series": "PVGIS 6, nulls filled with KNMI month-hour ratio proxy",
+  "annual": {
+    "2021": {
+      "n_hours": 8760,
+      "n_hours_dropped_missing": 0,
+      "energy_mwh": 1035.471,
+      "revenue_eur": 84264.8,
+      "baseload_price": 102.971,
+      "capture_price": 81.378,
+      "capture_rate": 0.7903,
+      "capture_discount_eur_mwh": 21.593,
+      "identity_check_pbar_plus_cov_over_ebar": 81.378,
+      "cov_e_p": -2.55238,
+      "spearman_e_p_production_hours": -0.2895,
+      "mean_price_production_hours": 98.242
+    },
+    "2022": {
+      "n_hours": 8760,
+      "n_hours_dropped_missing": 0,
+      "energy_mwh": 1209.451,
+      "revenue_eur": 258193.13,
+      "baseload_price": 241.91,
+      "capture_price": 213.48,
+      "capture_rate": 0.8825,
+      "capture_discount_eur_mwh": 28.43,
+      "identity_check_pbar_plus_cov_over_ebar": 213.48,
+      "cov_e_p": -3.92521,
+      "spearman_e_p_production_hours": -0.2639,
+      "mean_price_production_hours": 247.286
+    },
+    "2023": {
+      "n_hours": 8760,
+      "n_hours_dropped_missing": 0,
+      "energy_mwh": 1073.241,
+      "revenue_eur": 73536.64,
+      "baseload_price": 95.818,
+      "capture_price": 68.518,
+      "capture_rate": 0.7151,
+      "capture_discount_eur_mwh": 27.299,
+      "identity_check_pbar_plus_cov_over_ebar": 68.518,
+      "cov_e_p": -3.34463,
+      "spearman_e_p_production_hours": -0.4685,
+      "mean_price_production_hours": 91.051
+    },
+    "2024": {
+      "n_hours": 8784,
+      "n_hours_dropped_missing": 0,
+      "energy_mwh": 1033.261,
+      "revenue_eur": 43788.38,
+      "baseload_price": 77.289,
+      "capture_price": 42.379,
+      "capture_rate": 0.5483,
+      "capture_discount_eur_mwh": 34.91,
+      "identity_check_pbar_plus_cov_over_ebar": 42.379,
+      "cov_e_p": -4.10651,
+      "spearman_e_p_production_hours": -0.5819,
+      "mean_price_production_hours": 69.905
+    }
+  },
+  "negative_prices": {
+    "2021": {
+      "negative_hours": 70,
+      "negative_hours_with_production": 60,
+      "energy_in_negative_hours_mwh": 28.55,
+      "pct_energy_in_negative_hours": 2.757,
+      "revenue_in_negative_hours_eur": -476.25,
+      "mean_price_when_negative_and_producing": -17.13,
+      "zero_price_hours_with_production": 8,
+      "energy_in_zero_price_hours_mwh": 2.975,
+      "revenue_total_eur": 84264.8,
+      "revenue_if_curtailed_eur": 84741.05,
+      "curtailment_gain_eur": 476.25
+    },
+    "2022": {
+      "negative_hours": 86,
+      "negative_hours_with_production": 71,
+      "energy_in_negative_hours_mwh": 43.759,
+      "pct_energy_in_negative_hours": 3.618,
+      "revenue_in_negative_hours_eur": -2139.81,
+      "mean_price_when_negative_and_producing": -41.24,
+      "zero_price_hours_with_production": 20,
+      "energy_in_zero_price_hours_mwh": 11.656,
+      "revenue_total_eur": 258193.13,
+      "revenue_if_curtailed_eur": 260332.94,
+      "curtailment_gain_eur": 2139.81
+    },
+    "2023": {
+      "negative_hours": 315,
+      "negative_hours_with_production": 227,
+      "energy_in_negative_hours_mwh": 115.16,
+      "pct_energy_in_negative_hours": 10.73,
+      "revenue_in_negative_hours_eur": -4951.29,
+      "mean_price_when_negative_and_producing": -35.55,
+      "zero_price_hours_with_production": 36,
+      "energy_in_zero_price_hours_mwh": 15.607,
+      "revenue_total_eur": 73536.64,
+      "revenue_if_curtailed_eur": 78487.94,
+      "curtailment_gain_eur": 4951.29
+    },
+    "2024": {
+      "negative_hours": 458,
+      "negative_hours_with_production": 413,
+      "energy_in_negative_hours_mwh": 209.328,
+      "pct_energy_in_negative_hours": 20.259,
+      "revenue_in_negative_hours_eur": -5059.51,
+      "mean_price_when_negative_and_producing": -20.52,
+      "zero_price_hours_with_production": 62,
+      "energy_in_zero_price_hours_mwh": 23.816,
+      "revenue_total_eur": 43788.38,
+      "revenue_if_curtailed_eur": 48847.9,
+      "curtailment_gain_eur": 5059.51
+    }
+  },
+  "covariance_decomposition_month_hour": {
+    "2021": {
+      "cov_total": -2.55238,
+      "cov_within": -0.19701,
+      "cov_between": -2.35538,
+      "discount_total_eur_mwh": 21.593,
+      "discount_within_eur_mwh": 1.667,
+      "discount_between_eur_mwh": 19.926
+    },
+    "2022": {
+      "cov_total": -3.92521,
+      "cov_within": -0.91648,
+      "cov_between": -3.00873,
+      "discount_total_eur_mwh": 28.43,
+      "discount_within_eur_mwh": 6.638,
+      "discount_between_eur_mwh": 21.792
+    },
+    "2023": {
+      "cov_total": -3.34463,
+      "cov_within": -0.44201,
+      "cov_between": -2.90261,
+      "discount_total_eur_mwh": 27.299,
+      "discount_within_eur_mwh": 3.608,
+      "discount_between_eur_mwh": 23.692
+    },
+    "2024": {
+      "cov_total": -4.10651,
+      "cov_within": -0.52564,
+      "cov_between": -3.58087,
+      "discount_total_eur_mwh": 34.91,
+      "discount_within_eur_mwh": 4.469,
+      "discount_between_eur_mwh": 30.442
+    }
+  },
+  "price_by_pv_decile": {
+    "2021": [
+      117.88,
+      129.37,
+      120.72,
+      101.89,
+      96.81,
+      94.17,
+      93.01,
+      85.49,
+      82.04,
+      61.03
+    ],
+    "2022": [
+      296.62,
+      280.22,
+      261.14,
+      273.27,
+      268.16,
+      260.44,
+      244.95,
+      225.81,
+      204.36,
+      157.87
+    ],
+    "2023": [
+      121.49,
+      113.64,
+      112.2,
+      107.89,
+      98.93,
+      90.41,
+      86.79,
+      67.57,
+      70.19,
+      41.42
+    ],
+    "2024": [
+      110.33,
+      112.59,
+      93.04,
+      79.87,
+      77.07,
+      67.24,
+      57.85,
+      48.37,
+      40.09,
+      12.61
+    ]
+  },
+  "treatments": {
+    "pv6_proxy_filled": {
+      "2021": {
+        "energy_mwh": 1035.471,
+        "revenue_eur": 84264.8,
+        "capture_price": 81.378,
+        "capture_rate": 0.7903,
+        "n_hours_dropped_missing": 0
+      },
+      "2022": {
+        "energy_mwh": 1209.451,
+        "revenue_eur": 258193.13,
+        "capture_price": 213.48,
+        "capture_rate": 0.8825,
+        "n_hours_dropped_missing": 0
+      },
+      "2023": {
+        "energy_mwh": 1073.241,
+        "revenue_eur": 73536.64,
+        "capture_price": 68.518,
+        "capture_rate": 0.7151,
+        "n_hours_dropped_missing": 0
+      },
+      "2024": {
+        "energy_mwh": 1033.261,
+        "revenue_eur": 43788.38,
+        "capture_price": 42.379,
+        "capture_rate": 0.5483,
+        "n_hours_dropped_missing": 0
+      }
+    },
+    "pv6_nulls_as_zero": {
+      "2021": {
+        "energy_mwh": 1033.362,
+        "revenue_eur": 84010.29,
+        "capture_price": 81.298,
+        "capture_rate": 0.7895,
+        "n_hours_dropped_missing": 0
+      },
+      "2022": {
+        "energy_mwh": 1205.508,
+        "revenue_eur": 257157.76,
+        "capture_price": 213.319,
+        "capture_rate": 0.8818,
+        "n_hours_dropped_missing": 0
+      },
+      "2023": {
+        "energy_mwh": 1071.193,
+        "revenue_eur": 73355.14,
+        "capture_price": 68.48,
+        "capture_rate": 0.7147,
+        "n_hours_dropped_missing": 0
+      },
+      "2024": {
+        "energy_mwh": 1030.537,
+        "revenue_eur": 43591.25,
+        "capture_price": 42.3,
+        "capture_rate": 0.5473,
+        "n_hours_dropped_missing": 0
+      }
+    },
+    "pv6_complete_case": {
+      "2021": {
+        "energy_mwh": 1033.362,
+        "revenue_eur": 84010.29,
+        "capture_price": 81.298,
+        "capture_rate": 0.7895,
+        "n_hours_dropped_missing": 6
+      },
+      "2022": {
+        "energy_mwh": 1205.508,
+        "revenue_eur": 257157.76,
+        "capture_price": 213.319,
+        "capture_rate": 0.8818,
+        "n_hours_dropped_missing": 12
+      },
+      "2023": {
+        "energy_mwh": 1071.193,
+        "revenue_eur": 73355.14,
+        "capture_price": 68.48,
+        "capture_rate": 0.7147,
+        "n_hours_dropped_missing": 8
+      },
+      "2024": {
+        "energy_mwh": 1030.537,
+        "revenue_eur": 43591.25,
+        "capture_price": 42.3,
+        "capture_rate": 0.5473,
+        "n_hours_dropped_missing": 7
+      }
+    },
+    "pv53_raw": {
+      "2021": {
+        "energy_mwh": 989.888,
+        "revenue_eur": 80226.14,
+        "capture_price": 81.046,
+        "capture_rate": 0.7871,
+        "n_hours_dropped_missing": 0
+      },
+      "2022": {
+        "energy_mwh": 1158.107,
+        "revenue_eur": 245978.03,
+        "capture_price": 212.397,
+        "capture_rate": 0.878,
+        "n_hours_dropped_missing": 0
+      },
+      "2023": {
+        "energy_mwh": 1025.67,
+        "revenue_eur": 69797.9,
+        "capture_price": 68.051,
+        "capture_rate": 0.7102,
+        "n_hours_dropped_missing": 0
+      }
+    },
+    "pv53_zeros_fixed": {
+      "2021": {
+        "energy_mwh": 991.905,
+        "revenue_eur": 80469.43,
+        "capture_price": 81.126,
+        "capture_rate": 0.7879,
+        "n_hours_dropped_missing": 0
+      },
+      "2022": {
+        "energy_mwh": 1161.904,
+        "revenue_eur": 246973.04,
+        "capture_price": 212.559,
+        "capture_rate": 0.8787,
+        "n_hours_dropped_missing": 0
+      },
+      "2023": {
+        "energy_mwh": 1027.633,
+        "revenue_eur": 69971.47,
+        "capture_price": 68.09,
+        "capture_rate": 0.7106,
+        "n_hours_dropped_missing": 0
+      }
+    }
+  },
+  "pvgis53_vs_6": {
+    "2021": {
+      "revenue_53": 80469.43,
+      "revenue_6": 84264.8,
+      "revenue_pct_diff": 4.72,
+      "energy_pct_diff": 4.39,
+      "capture_price_53": 81.126,
+      "capture_price_6": 81.378,
+      "capture_price_diff_eur": 0.252
+    },
+    "2022": {
+      "revenue_53": 246973.04,
+      "revenue_6": 258193.13,
+      "revenue_pct_diff": 4.54,
+      "energy_pct_diff": 4.09,
+      "capture_price_53": 212.559,
+      "capture_price_6": 213.48,
+      "capture_price_diff_eur": 0.921
+    },
+    "2023": {
+      "revenue_53": 69971.47,
+      "revenue_6": 73536.64,
+      "revenue_pct_diff": 5.1,
+      "energy_pct_diff": 4.44,
+      "capture_price_53": 68.09,
+      "capture_price_6": 68.518,
+      "capture_price_diff_eur": 0.428
+    }
+  },
+  "monthly": {
+    "2021-01-01": {
+      "energy_mwh": 37.501,
+      "revenue_eur": 2234.664,
+      "baseload": 53.621,
+      "capture_price": 59.589,
+      "capture_rate": 1.111
+    },
+    "2021-02-01": {
+      "energy_mwh": 54.271,
+      "revenue_eur": 2447.174,
+      "baseload": 49.235,
+      "capture_price": 45.092,
+      "capture_rate": 0.916
+    },
+    "2021-03-01": {
+      "energy_mwh": 89.341,
+      "revenue_eur": 3669.957,
+      "baseload": 48.891,
+      "capture_price": 41.078,
+      "capture_rate": 0.84
+    },
+    "2021-04-01": {
+      "energy_mwh": 127.36,
+      "revenue_eur": 5748.079,
+      "baseload": 53.869,
+      "capture_price": 45.133,
+      "capture_rate": 0.838
+    },
+    "2021-05-01": {
+      "energy_mwh": 121.968,
+      "revenue_eur": 5872.823,
+      "baseload": 56.117,
+      "capture_price": 48.15,
+      "capture_rate": 0.858
+    },
+    "2021-06-01": {
+      "energy_mwh": 140.543,
+      "revenue_eur": 9561.708,
+      "baseload": 76.509,
+      "capture_price": 68.034,
+      "capture_rate": 0.889
+    },
+    "2021-07-01": {
+      "energy_mwh": 122.466,
+      "revenue_eur": 8938.027,
+      "baseload": 82.583,
+      "capture_price": 72.984,
+      "capture_rate": 0.884
+    },
+    "2021-08-01": {
+      "energy_mwh": 111.749,
+      "revenue_eur": 9112.743,
+      "baseload": 86.663,
+      "capture_price": 81.547,
+      "capture_rate": 0.941
+    },
+    "2021-09-01": {
+      "energy_mwh": 99.791,
+      "revenue_eur": 12183.828,
+      "baseload": 136.387,
+      "capture_price": 122.093,
+      "capture_rate": 0.895
+    },
+    "2021-10-01": {
+      "energy_mwh": 67.785,
+      "revenue_eur": 10761.538,
+      "baseload": 163.806,
+      "capture_price": 158.761,
+      "capture_rate": 0.969
+    },
+    "2021-11-01": {
+      "energy_mwh": 36.95,
+      "revenue_eur": 6725.47,
+      "baseload": 186.3,
+      "capture_price": 182.014,
+      "capture_rate": 0.977
+    },
+    "2021-12-01": {
+      "energy_mwh": 25.744,
+      "revenue_eur": 7008.791,
+      "baseload": 237.803,
+      "capture_price": 272.246,
+      "capture_rate": 1.145
+    },
+    "2022-01-01": {
+      "energy_mwh": 24.567,
+      "revenue_eur": 5141.109,
+      "baseload": 189.236,
+      "capture_price": 209.271,
+      "capture_rate": 1.106
+    },
+    "2022-02-01": {
+      "energy_mwh": 61.358,
+      "revenue_eur": 9043.575,
+      "baseload": 168.292,
+      "capture_price": 147.39,
+      "capture_rate": 0.876
+    },
+    "2022-03-01": {
+      "energy_mwh": 138.533,
+      "revenue_eur": 29208.308,
+      "baseload": 261.031,
+      "capture_price": 210.839,
+      "capture_rate": 0.808
+    },
+    "2022-04-01": {
+      "energy_mwh": 133.236,
+      "revenue_eur": 18490.488,
+      "baseload": 195.312,
+      "capture_price": 138.78,
+      "capture_rate": 0.711
+    },
+    "2022-05-01": {
+      "energy_mwh": 146.818,
+      "revenue_eur": 20327.666,
+      "baseload": 181.398,
+      "capture_price": 138.455,
+      "capture_rate": 0.763
+    },
+    "2022-06-01": {
+      "energy_mwh": 151.634,
+      "revenue_eur": 26601.874,
+      "baseload": 210.704,
+      "capture_price": 175.435,
+      "capture_rate": 0.833
+    },
+    "2022-07-01": {
+      "energy_mwh": 148.704,
+      "revenue_eur": 35581.235,
+      "baseload": 306.863,
+      "capture_price": 239.276,
+      "capture_rate": 0.78
+    },
+    "2022-08-01": {
+      "energy_mwh": 146.256,
+      "revenue_eur": 53096.809,
+      "baseload": 447.25,
+      "capture_price": 363.039,
+      "capture_rate": 0.812
+    },
+    "2022-09-01": {
+      "energy_mwh": 107.227,
+      "revenue_eur": 32852.127,
+      "baseload": 340.894,
+      "capture_price": 306.38,
+      "capture_rate": 0.899
+    },
+    "2022-10-01": {
+      "energy_mwh": 73.763,
+      "revenue_eur": 9645.822,
+      "baseload": 155.51,
+      "capture_price": 130.768,
+      "capture_rate": 0.841
+    },
+    "2022-11-01": {
+      "energy_mwh": 49.344,
+      "revenue_eur": 8649.234,
+      "baseload": 179.481,
+      "capture_price": 175.284,
+      "capture_rate": 0.977
+    },
+    "2022-12-01": {
+      "energy_mwh": 28.01,
+      "revenue_eur": 9554.884,
+      "baseload": 258.492,
+      "capture_price": 341.118,
+      "capture_rate": 1.32
+    },
+    "2023-01-01": {
+      "energy_mwh": 30.758,
+      "revenue_eur": 4060.676,
+      "baseload": 126.128,
+      "capture_price": 132.019,
+      "capture_rate": 1.047
+    },
+    "2023-02-01": {
+      "energy_mwh": 54.652,
+      "revenue_eur": 6646.022,
+      "baseload": 134.91,
+      "capture_price": 121.607,
+      "capture_rate": 0.901
+    },
+    "2023-03-01": {
+      "energy_mwh": 81.947,
+      "revenue_eur": 7007.831,
+      "baseload": 104.445,
+      "capture_price": 85.516,
+      "capture_rate": 0.819
+    },
+    "2023-04-01": {
+      "energy_mwh": 120.659,
+      "revenue_eur": 7911.635,
+      "baseload": 98.711,
+      "capture_price": 65.57,
+      "capture_rate": 0.664
+    },
+    "2023-05-01": {
+      "energy_mwh": 152.825,
+      "revenue_eur": 5730.082,
+      "baseload": 77.877,
+      "capture_price": 37.494,
+      "capture_rate": 0.481
+    },
+    "2023-06-01": {
+      "energy_mwh": 168.063,
+      "revenue_eur": 11071.795,
+      "baseload": 92.041,
+      "capture_price": 65.879,
+      "capture_rate": 0.716
+    },
+    "2023-07-01": {
+      "energy_mwh": 124.229,
+      "revenue_eur": 5900.541,
+      "baseload": 71.693,
+      "capture_price": 47.497,
+      "capture_rate": 0.663
+    },
+    "2023-08-01": {
+      "energy_mwh": 123.041,
+      "revenue_eur": 8280.238,
+      "baseload": 91.419,
+      "capture_price": 67.296,
+      "capture_rate": 0.736
+    },
+    "2023-09-01": {
+      "energy_mwh": 110.471,
+      "revenue_eur": 8084.899,
+      "baseload": 98.695,
+      "capture_price": 73.186,
+      "capture_rate": 0.742
+    },
+    "2023-10-01": {
+      "energy_mwh": 54.34,
+      "revenue_eur": 3850.026,
+      "baseload": 90.189,
+      "capture_price": 70.851,
+      "capture_rate": 0.786
+    },
+    "2023-11-01": {
+      "energy_mwh": 34.49,
+      "revenue_eur": 3319.06,
+      "baseload": 94.465,
+      "capture_price": 96.232,
+      "capture_rate": 1.019
+    },
+    "2023-12-01": {
+      "energy_mwh": 17.764,
+      "revenue_eur": 1673.838,
+      "baseload": 73.045,
+      "capture_price": 94.227,
+      "capture_rate": 1.29
+    },
+    "2024-01-01": {
+      "energy_mwh": 45.216,
+      "revenue_eur": 3385.474,
+      "baseload": 78.428,
+      "capture_price": 74.874,
+      "capture_rate": 0.955
+    },
+    "2024-02-01": {
+      "energy_mwh": 35.225,
+      "revenue_eur": 2300.867,
+      "baseload": 63.911,
+      "capture_price": 65.319,
+      "capture_rate": 1.022
+    },
+    "2024-03-01": {
+      "energy_mwh": 81.693,
+      "revenue_eur": 3561.781,
+      "baseload": 63.377,
+      "capture_price": 43.6,
+      "capture_rate": 0.688
+    },
+    "2024-04-01": {
+      "energy_mwh": 111.633,
+      "revenue_eur": 3502.3,
+      "baseload": 58.423,
+      "capture_price": 31.373,
+      "capture_rate": 0.537
+    },
+    "2024-05-01": {
+      "energy_mwh": 134.212,
+      "revenue_eur": 2717.41,
+      "baseload": 65.7,
+      "capture_price": 20.247,
+      "capture_rate": 0.308
+    },
+    "2024-06-01": {
+      "energy_mwh": 127.694,
+      "revenue_eur": 4496.381,
+      "baseload": 68.062,
+      "capture_price": 35.212,
+      "capture_rate": 0.517
+    },
+    "2024-07-01": {
+      "energy_mwh": 135.225,
+      "revenue_eur": 3964.89,
+      "baseload": 65.044,
+      "capture_price": 29.321,
+      "capture_rate": 0.451
+    },
+    "2024-08-01": {
+      "energy_mwh": 136.44,
+      "revenue_eur": 5185.858,
+      "baseload": 77.096,
+      "capture_price": 38.008,
+      "capture_rate": 0.493
+    },
+    "2024-09-01": {
+      "energy_mwh": 103.336,
+      "revenue_eur": 4362.273,
+      "baseload": 77.624,
+      "capture_price": 42.214,
+      "capture_rate": 0.544
+    },
+    "2024-10-01": {
+      "energy_mwh": 64.631,
+      "revenue_eur": 4311.842,
+      "baseload": 87.804,
+      "capture_price": 66.715,
+      "capture_rate": 0.76
+    },
+    "2024-11-01": {
+      "energy_mwh": 41.228,
+      "revenue_eur": 4250.173,
+      "baseload": 113.468,
+      "capture_price": 103.088,
+      "capture_rate": 0.909
+    },
+    "2024-12-01": {
+      "energy_mwh": 16.727,
+      "revenue_eur": 1749.136,
+      "baseload": 107.943,
+      "capture_price": 104.567,
+      "capture_rate": 0.969
+    }
+  },
+  "seasonal_shares": {
+    "2021": {
+      "DJF": {
+        "pct_energy": 11.3,
+        "pct_revenue": 13.9
+      },
+      "MAM": {
+        "pct_energy": 32.7,
+        "pct_revenue": 18.1
+      },
+      "JJA": {
+        "pct_energy": 36.2,
+        "pct_revenue": 32.8
+      },
+      "SON": {
+        "pct_energy": 19.8,
+        "pct_revenue": 35.2
+      }
+    },
+    "2022": {
+      "DJF": {
+        "pct_energy": 9.4,
+        "pct_revenue": 9.2
+      },
+      "MAM": {
+        "pct_energy": 34.6,
+        "pct_revenue": 26.3
+      },
+      "JJA": {
+        "pct_energy": 36.9,
+        "pct_revenue": 44.6
+      },
+      "SON": {
+        "pct_energy": 19.0,
+        "pct_revenue": 19.8
+      }
+    },
+    "2023": {
+      "DJF": {
+        "pct_energy": 9.6,
+        "pct_revenue": 16.8
+      },
+      "MAM": {
+        "pct_energy": 33.1,
+        "pct_revenue": 28.1
+      },
+      "JJA": {
+        "pct_energy": 38.7,
+        "pct_revenue": 34.3
+      },
+      "SON": {
+        "pct_energy": 18.6,
+        "pct_revenue": 20.7
+      }
+    },
+    "2024": {
+      "DJF": {
+        "pct_energy": 9.4,
+        "pct_revenue": 17.0
+      },
+      "MAM": {
+        "pct_energy": 31.7,
+        "pct_revenue": 22.3
+      },
+      "JJA": {
+        "pct_energy": 38.7,
+        "pct_revenue": 31.2
+      },
+      "SON": {
+        "pct_energy": 20.2,
+        "pct_revenue": 29.5
+      }
+    }
+  },
+  "monthly_revenue_stats": {
+    "2021": {
+      "min_month": "2021-01-01",
+      "min_eur": 2235.0,
+      "max_month": "2021-09-01",
+      "max_eur": 12184.0,
+      "n_months_negative": 0
+    },
+    "2022": {
+      "min_month": "2022-01-01",
+      "min_eur": 5141.0,
+      "max_month": "2022-08-01",
+      "max_eur": 53097.0,
+      "n_months_negative": 0
+    },
+    "2023": {
+      "min_month": "2023-12-01",
+      "min_eur": 1674.0,
+      "max_month": "2023-06-01",
+      "max_eur": 11072.0,
+      "n_months_negative": 0
+    },
+    "2024": {
+      "min_month": "2024-12-01",
+      "min_eur": 1749.0,
+      "max_month": "2024-08-01",
+      "max_eur": 5186.0,
+      "n_months_negative": 0
+    }
+  },
+  "months_capture_rate_above_1": [
+    "2021-01-01",
+    "2021-12-01",
+    "2022-01-01",
+    "2022-12-01",
+    "2023-01-01",
+    "2023-11-01",
+    "2023-12-01",
+    "2024-02-01"
+  ],
+  "yoy_lmdi": {
+    "2021->2022": {
+      "revenue_change_eur": 173929.04,
+      "pct_change": 206.41,
+      "volume_effect_eur": 24124.12,
+      "price_effect_eur": 149804.92,
+      "energy_pct_change": 16.8,
+      "capture_price_pct_change": 162.33
+    },
+    "2022->2023": {
+      "revenue_change_eur": -184657.27,
+      "pct_change": -71.52,
+      "volume_effect_eur": -17567.45,
+      "price_effect_eur": -167089.82,
+      "energy_pct_change": -11.26,
+      "capture_price_pct_change": -67.9
+    },
+    "2023->2024": {
+      "revenue_change_eur": -29747.76,
+      "pct_change": -40.45,
+      "volume_effect_eur": -2178.45,
+      "price_effect_eur": -27569.31,
+      "energy_pct_change": -3.73,
+      "capture_price_pct_change": -38.15
+    }
+  },
+  "figures": [
+    "stage2_capture_vs_baseload.png",
+    "stage2_price_by_pv_decile.png",
+    "stage2_price_heatmaps.png",
+    "stage2_monthly_revenue.png",
+    "stage2_negative_price_exposure.png",
+    "stage2_diurnal_price_by_year.png"
+  ]
+}

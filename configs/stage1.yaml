@@ -1,0 +1,46 @@
+# Stage 1 — Data feasibility audit configuration.
+# All PV system parameters are HYPOTHETICAL test assumptions, not a real installation.
+
+site:
+  name: "Near Biddinghuizen, Flevoland (hypothetical site)"
+  latitude: 52.45
+  longitude: 5.70
+
+pv_system:
+  peak_power_kwp: 1000        # 1 MWp test system
+  system_loss_pct: 14         # PVGIS 5.3 'loss'; PVGIS 6 'system_efficiency' = 1 - loss/100
+  tilt_deg: 35
+  azimuth_south_based_deg: 0  # 0 = south (PVGIS 5.3 convention). Converted to 180 for PVGIS 6 (north-based).
+
+period:
+  years: [2021, 2022, 2023, 2024]
+  timezone: "UTC"
+
+pvgis53:
+  base_url: "https://re.jrc.ec.europa.eu/api/v5_3/seriescalc"
+
+pvgis6:
+  base_url: "https://photovoltaic-geographic-information-system.ec.europa.eu/api/v6/power/broadband"
+  openapi_url: "https://photovoltaic-geographic-information-system.ec.europa.eu/api/v6/openapi.json"
+
+knmi:
+  url: "https://www.daggegevens.knmi.nl/klimatologie/uurgegevens"
+  stations:
+    269: "Lelystad Airport"
+    273: "Marknesse"
+  variables: ["Q", "T", "SQ"]
+
+prices:
+  # Primary (official) source: ENTSO-E Transparency Platform — needs a personal token in env var ENTSOE_API_TOKEN.
+  entsoe_url: "https://web-api.tp.entsoe.eu/api"
+  entsoe_bidding_zone: "10YNL----------L"
+  # Documented fallback: Energy-Charts (Fraunhofer ISE), data from Bundesnetzagentur | SMARD.de, CC BY 4.0.
+  energycharts_url: "https://api.energy-charts.info/price"
+  energycharts_bzn: "NL"
+
+paths:
+  raw: "data/raw"
+  interim: "data/interim"
+  processed: "data/processed"
+  audit: "reports/data_audit"
+  figures: "reports/figures"

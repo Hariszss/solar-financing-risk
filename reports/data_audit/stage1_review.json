@@ -1,0 +1,534 @@
+{
+  "timestamps": {
+    "2021": {
+      "ok": true,
+      "rows_csv": 8760,
+      "rows_json": 8760,
+      "index_matches": true,
+      "values_match": true,
+      "first_source_time": "2021-01-01 00:11:02.587219+00:00",
+      "last_source_time": "2021-12-31 23:11:02.587219+00:00",
+      "source_minute_second": [
+        [
+          11,
+          2
+        ]
+      ],
+      "feb29_hours": 0,
+      "nulls_csv": 6,
+      "nulls_json": 6
+    },
+    "2022": {
+      "ok": true,
+      "rows_csv": 8760,
+      "rows_json": 8760,
+      "index_matches": true,
+      "values_match": true,
+      "first_source_time": "2022-01-01 00:11:02.587219+00:00",
+      "last_source_time": "2022-12-31 23:11:02.587219+00:00",
+      "source_minute_second": [
+        [
+          11,
+          2
+        ]
+      ],
+      "feb29_hours": 0,
+      "nulls_csv": 12,
+      "nulls_json": 12
+    },
+    "2023": {
+      "ok": true,
+      "rows_csv": 8760,
+      "rows_json": 8760,
+      "index_matches": true,
+      "values_match": true,
+      "first_source_time": "2023-01-01 00:11:02.587219+00:00",
+      "last_source_time": "2023-12-31 23:11:02.587219+00:00",
+      "source_minute_second": [
+        [
+          11,
+          2
+        ]
+      ],
+      "feb29_hours": 0,
+      "nulls_csv": 8,
+      "nulls_json": 8
+    },
+    "2024": {
+      "ok": true,
+      "rows_csv": 8784,
+      "rows_json": 8784,
+      "index_matches": true,
+      "values_match": true,
+      "first_source_time": "2024-01-01 00:11:02.587219+00:00",
+      "last_source_time": "2024-12-31 23:11:02.587219+00:00",
+      "source_minute_second": [
+        [
+          11,
+          2
+        ]
+      ],
+      "feb29_hours": 24,
+      "nulls_csv": 7,
+      "nulls_json": 7
+    }
+  },
+  "poa": {
+    "2021": {
+      "poa_before_reflection_kwh_m2": {
+        "pvgis53": 1247.25,
+        "pvgis6": 1247.23,
+        "pct_diff": -0.002
+      },
+      "components_kwh_m2": {
+        "beam": [
+          642.25,
+          642.69
+        ],
+        "diffuse": [
+          585.79,
+          585.23
+        ],
+        "ground_reflected": [
+          19.21,
+          19.31
+        ]
+      },
+      "pvgis6_chain_kwh_m2": {
+        "before_reflection": 1247.23,
+        "after_reflection": 1225.13,
+        "effective (after efficiency & spectral)": 1201.58
+      },
+      "pvgis6_energy_weighted_spectral_factor": 1.0181,
+      "energy_mwh": {
+        "pvgis53": 989.89,
+        "pvgis6": 1033.36
+      },
+      "yield_per_poa_kwh_per_kwp_per_kwh_m2": {
+        "pvgis53": 0.7937,
+        "pvgis6": 0.8285
+      }
+    },
+    "2022": {
+      "poa_before_reflection_kwh_m2": {
+        "pvgis53": 1462.74,
+        "pvgis6": 1462.93,
+        "pct_diff": 0.012
+      },
+      "components_kwh_m2": {
+        "beam": [
+          864.74,
+          865.36
+        ],
+        "diffuse": [
+          576.13,
+          575.59
+        ],
+        "ground_reflected": [
+          21.87,
+          21.97
+        ]
+      },
+      "pvgis6_chain_kwh_m2": {
+        "before_reflection": 1462.93,
+        "after_reflection": 1436.68,
+        "effective (after efficiency & spectral)": 1401.75
+      },
+      "pvgis6_energy_weighted_spectral_factor": 1.0178,
+      "energy_mwh": {
+        "pvgis53": 1158.11,
+        "pvgis6": 1205.51
+      },
+      "yield_per_poa_kwh_per_kwp_per_kwh_m2": {
+        "pvgis53": 0.7917,
+        "pvgis6": 0.824
+      }
+    },
+    "2023": {
+      "poa_before_reflection_kwh_m2": {
+        "pvgis53": 1298.59,
+        "pvgis6": 1298.47,
+        "pct_diff": -0.01
+      },
+      "components_kwh_m2": {
+        "beam": [
+          707.33,
+          707.86
+        ],
+        "diffuse": [
+          571.03,
+          570.25
+        ],
+        "ground_reflected": [
+          20.23,
+          20.35
+        ]
+      },
+      "pvgis6_chain_kwh_m2": {
+        "before_reflection": 1298.47,
+        "after_reflection": 1275.26,
+        "effective (after efficiency & spectral)": 1245.57
+      },
+      "pvgis6_energy_weighted_spectral_factor": 1.0175,
+      "energy_mwh": {
+        "pvgis53": 1025.67,
+        "pvgis6": 1071.19
+      },
+      "yield_per_poa_kwh_per_kwp_per_kwh_m2": {
+        "pvgis53": 0.7898,
+        "pvgis6": 0.825
+      }
+    }
+  },
+  "ablations": {
+    "2021": {
+      "default": {
+        "params": {},
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1033.36,
+        "pct_vs_pvgis53_common_hours": 4.39
+      },
+      "older_module_coefficients": {
+        "params": {
+          "photovoltaic_module": "cSi:Free standing"
+        },
+        "technology_reported": "cSi:Free standing",
+        "energy_mwh": 1008.18,
+        "pct_vs_pvgis53_common_hours": 1.85
+      },
+      "reflectivity_off": {
+        "params": {
+          "apply_reflectivity_factor": "false"
+        },
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1036.0,
+        "pct_vs_pvgis53_common_hours": 4.66
+      },
+      "older_module+reflectivity_off": {
+        "params": {
+          "photovoltaic_module": "cSi:Free standing",
+          "apply_reflectivity_factor": "false"
+        },
+        "technology_reported": "cSi:Free standing",
+        "energy_mwh": 1011.07,
+        "pct_vs_pvgis53_common_hours": 2.14
+      },
+      "temperature_model_None": {
+        "params": {
+          "temperature_model": "None"
+        },
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1033.36,
+        "pct_vs_pvgis53_common_hours": 4.39
+      }
+    },
+    "2022": {
+      "default": {
+        "params": {},
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1205.51,
+        "pct_vs_pvgis53_common_hours": 4.09
+      },
+      "older_module_coefficients": {
+        "params": {
+          "photovoltaic_module": "cSi:Free standing"
+        },
+        "technology_reported": "cSi:Free standing",
+        "energy_mwh": 1176.77,
+        "pct_vs_pvgis53_common_hours": 1.61
+      },
+      "reflectivity_off": {
+        "params": {
+          "apply_reflectivity_factor": "false"
+        },
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1209.53,
+        "pct_vs_pvgis53_common_hours": 4.44
+      },
+      "older_module+reflectivity_off": {
+        "params": {
+          "photovoltaic_module": "cSi:Free standing",
+          "apply_reflectivity_factor": "false"
+        },
+        "technology_reported": "cSi:Free standing",
+        "energy_mwh": 1181.14,
+        "pct_vs_pvgis53_common_hours": 1.99
+      },
+      "temperature_model_None": {
+        "params": {
+          "temperature_model": "None"
+        },
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1205.51,
+        "pct_vs_pvgis53_common_hours": 4.09
+      }
+    },
+    "2023": {
+      "default": {
+        "params": {},
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1071.19,
+        "pct_vs_pvgis53_common_hours": 4.44
+      },
+      "older_module_coefficients": {
+        "params": {
+          "photovoltaic_module": "cSi:Free standing"
+        },
+        "technology_reported": "cSi:Free standing",
+        "energy_mwh": 1043.67,
+        "pct_vs_pvgis53_common_hours": 1.75
+      },
+      "reflectivity_off": {
+        "params": {
+          "apply_reflectivity_factor": "false"
+        },
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1073.92,
+        "pct_vs_pvgis53_common_hours": 4.7
+      },
+      "older_module+reflectivity_off": {
+        "params": {
+          "photovoltaic_module": "cSi:Free standing",
+          "apply_reflectivity_factor": "false"
+        },
+        "technology_reported": "cSi:Free standing",
+        "energy_mwh": 1046.68,
+        "pct_vs_pvgis53_common_hours": 2.05
+      },
+      "temperature_model_None": {
+        "params": {
+          "temperature_model": "None"
+        },
+        "technology_reported": "cSi:Free standing 2025",
+        "energy_mwh": 1071.19,
+        "pct_vs_pvgis53_common_hours": 4.44
+      }
+    }
+  },
+  "silent_zeros": {
+    "n_silent": 26,
+    "computed_elevation_deg": {
+      "min": 10.2,
+      "median": 30.5,
+      "max": 60.6
+    },
+    "knmi269_ghi_wm2_on_silent_hours": {
+      "min": 38.9,
+      "median": 322.2,
+      "n_zero": 0
+    },
+    "knmi269_ghi_wm2_on_normal_daylight_hours_median": 222.2,
+    "era5_t2m_present_on_silent_hours": true,
+    "pvgis6_null_on_silent_hours": 26,
+    "threshold_sensitivity": {
+      "0": {
+        "zero_power_hours (hourly-mean elevation)": 877,
+        "record_zeroed (elevation at HH:11)": 374
+      },
+      "1": {
+        "zero_power_hours (hourly-mean elevation)": 656,
+        "record_zeroed (elevation at HH:11)": 137
+      },
+      "2": {
+        "zero_power_hours (hourly-mean elevation)": 502,
+        "record_zeroed (elevation at HH:11)": 26
+      },
+      "5": {
+        "zero_power_hours (hourly-mean elevation)": 149,
+        "record_zeroed (elevation at HH:11)": 26
+      },
+      "10": {
+        "zero_power_hours (hourly-mean elevation)": 26,
+        "record_zeroed (elevation at HH:11)": 25
+      },
+      "15": {
+        "zero_power_hours (hourly-mean elevation)": 25,
+        "record_zeroed (elevation at HH:11)": 22
+      }
+    },
+    "hours": [
+      {
+        "t": "2021-03-04 11:00:00+00:00",
+        "elev": 30.6,
+        "knmi_ghi": 113.9,
+        "t2m": 4.53,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2021-07-21 13:00:00+00:00",
+        "elev": 52.0,
+        "knmi_ghi": 863.9,
+        "t2m": 23.03,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2021-09-20 06:00:00+00:00",
+        "elev": 10.2,
+        "knmi_ghi": 119.4,
+        "t2m": 10.98,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2021-10-08 12:00:00+00:00",
+        "elev": 30.2,
+        "knmi_ghi": 494.4,
+        "t2m": 15.29,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2021-10-11 11:00:00+00:00",
+        "elev": 30.7,
+        "knmi_ghi": 211.1,
+        "t2m": 14.53,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2021-10-12 11:00:00+00:00",
+        "elev": 30.3,
+        "knmi_ghi": 275.0,
+        "t2m": 12.31,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-02-02 11:00:00+00:00",
+        "elev": 20.3,
+        "knmi_ghi": 311.1,
+        "t2m": 7.99,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-04-27 10:00:00+00:00",
+        "elev": 48.9,
+        "knmi_ghi": 166.7,
+        "t2m": 10.83,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-06-28 06:00:00+00:00",
+        "elev": 25.8,
+        "knmi_ghi": 394.4,
+        "t2m": 14.36,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-06-28 07:00:00+00:00",
+        "elev": 34.9,
+        "knmi_ghi": 555.6,
+        "t2m": 15.82,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-06-28 08:00:00+00:00",
+        "elev": 43.8,
+        "knmi_ghi": 622.2,
+        "t2m": 16.84,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-06-29 05:00:00+00:00",
+        "elev": 16.8,
+        "knmi_ghi": 227.8,
+        "t2m": 16.99,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-06-29 06:00:00+00:00",
+        "elev": 25.7,
+        "knmi_ghi": 361.1,
+        "t2m": 18.03,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-06-29 07:00:00+00:00",
+        "elev": 34.9,
+        "knmi_ghi": 500.0,
+        "t2m": 19.4,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-07-25 11:00:00+00:00",
+        "elev": 57.1,
+        "knmi_ghi": 291.7,
+        "t2m": 23.42,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-09-06 07:00:00+00:00",
+        "elev": 22.5,
+        "knmi_ghi": 333.3,
+        "t2m": 18.34,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-10-11 11:00:00+00:00",
+        "elev": 30.7,
+        "knmi_ghi": 377.8,
+        "t2m": 13.29,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2022-10-12 11:00:00+00:00",
+        "elev": 30.3,
+        "knmi_ghi": 477.8,
+        "t2m": 13.39,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-03-21 07:00:00+00:00",
+        "elev": 15.5,
+        "knmi_ghi": 38.9,
+        "t2m": 8.64,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-03-21 08:00:00+00:00",
+        "elev": 23.5,
+        "knmi_ghi": 77.8,
+        "t2m": 8.88,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-03-22 07:00:00+00:00",
+        "elev": 15.8,
+        "knmi_ghi": 94.4,
+        "t2m": 10.32,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-05-02 07:00:00+00:00",
+        "elev": 29.4,
+        "knmi_ghi": 236.1,
+        "t2m": 8.01,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-06-06 07:00:00+00:00",
+        "elev": 35.0,
+        "knmi_ghi": 533.3,
+        "t2m": 13.85,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-06-12 09:00:00+00:00",
+        "elev": 52.0,
+        "knmi_ghi": 794.4,
+        "t2m": 25.63,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-06-30 11:00:00+00:00",
+        "elev": 60.6,
+        "knmi_ghi": 575.0,
+        "t2m": 20.7,
+        "pvgis6_kw": null
+      },
+      {
+        "t": "2023-07-05 07:00:00+00:00",
+        "elev": 34.4,
+        "knmi_ghi": 50.0,
+        "t2m": 13.82,
+        "pvgis6_kw": null
+      }
+    ]
+  }
+}
