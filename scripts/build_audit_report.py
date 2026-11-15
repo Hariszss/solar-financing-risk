@@ -1,7 +1,7 @@
 """Render reports/data_audit/AUDIT_REPORT.md from data_quality.json.
 
-Every number in the report is read from the JSON produced by run_stage1_audit.py — nothing is
-typed by hand — so the report cannot drift from the data.
+Results are read from the JSON produced by run_stage1_audit.py; a few descriptive values (e.g. the
+system definition) are written into the text.
 """
 
 from __future__ import annotations
@@ -89,8 +89,9 @@ L.append(tbl(["Category", "PVGIS 5.3", "PVGIS 6"], [
     ["  PVGIS 6 energy in those B hours (MWh, 3 yrs)", p["B_pvgis6_mwh_same_hours"], ""],
     ["Explicit nulls", p["n_null"], sz["pvgis6"]["n_null"]],
 ]) + "\n")
-L.append("**Finding:** PVGIS 5.3 encodes missing satellite slots as zeros (including its sun-height column) without "
-         "setting its reconstruction flag. Every such hour coincides with an explicit null in PVGIS 6. A pipeline "
+L.append("**Finding:** PVGIS 5.3 reports zeros for these hours (including its sun-height column) without "
+         "setting its reconstruction flag. Zero irradiance is not physically possible with the sun this high, and every "
+         "such hour is reported as missing (null) by PVGIS 6, which points to missing satellite input. A pipeline "
          "that trusted 5.3's zeros would book these hours as 'no production'.\n")
 g = sz["pvgis6_gap_materiality"]
 L.append("Materiality of PVGIS 6 nulls (KNMI-based proxy: GHI × month-hour PV/GHI ratio; order-of-magnitude only):\n")
@@ -184,7 +185,7 @@ L.append(tbl(["Dataset", "Verdict", "Reason"], [
      f"Only version covering 2024; complete index; {sz['pvgis6']['n_null']} explicit nulls (≤{gmax} % of annual energy); "
      "aligned with 5.3 and KNMI. Caveat: 'under development' → raw responses frozen with hashes."],
     ["PVGIS 5.3 (2021–2023)", "⚠️ PASS for sensitivity only",
-     f"No 2024; silent zero-encoding of missing slots; systematically {dmin}–{dmax} % lower than 6 → model-uncertainty band."],
+     f"No 2024; zero values in 26 daytime hours, likely missing satellite input; systematically {dmin}–{dmax} % lower than 6 → model-uncertainty band."],
     ["KNMI 269 / 273", "✅ PASS — consistency & sensitivity", "Complete, timestamps verified; cannot validate plant output."],
     ["NL day-ahead prices (Energy-Charts)", "✅ PASS — not cross-checked against ENTSO-E", "Complete 35,064 h, no duplicates, DST correct."],
     ["NL day-ahead prices (ENTSO-E)", "⏳ PENDING", "Requires personal API token (HTTP 401 without)."],

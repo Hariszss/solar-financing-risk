@@ -41,13 +41,16 @@ Raw data are not included; the scripts download them. Attribution and terms: [do
 
 ### A. Data quality and validation
 
-- The price and production series are complete for 2021–2024 (35,064 hours), with no duplicates.
+- The price and production series cover every hour of 2021–2024 (35,064 hours) with no duplicates;
+  PVGIS 6 has 33 hours without values, and PVGIS 5.3 does not cover 2024.
   Converting to local time reproduces exactly the eight daylight-saving changes.
 - PVGIS 6 returns its values without timestamps. The rebuilt time index was checked row by row
   against PVGIS's own timestamped output for every year: identical.
-- **PVGIS 5.3 records 26 hours of missing satellite data as zero production**, without flagging
-  them. An independent sun-position calculation and nearby weather-station measurements show the
-  sun was shining in those hours. PVGIS 6 marks the same hours as missing.
+- **PVGIS 5.3 reports zero irradiance and zero production for 26 daytime hours** that cannot be
+  real: an independent sun-position calculation puts the sun 10.2°–60.6° above the horizon (hourly
+  average), and the nearest KNMI station measured daylight irradiance in every one of them. PVGIS 6
+  reports the same 26 hours as missing, which suggests missing satellite input; PVGIS 5.3 does not
+  mark them as missing.
 - The two PVGIS versions differ by about 4 % in annual energy even though the sunlight input is the
   same; most of the difference comes from updated solar-module parameters. This is model
   uncertainty, carried as a sensitivity case.
@@ -60,10 +63,10 @@ the simple average market price. The gap equals the covariance between productio
 by average production.
 
 - Capture rate (capture price ÷ average price): **79 % (2021), 88 % (2022), 72 % (2023), 55 % (2024)**.
-  In 2024 the average price was €77/MWh, but this park would have received €42/MWh.
-- In 2024, **20 % of the park's output was produced in hours with negative prices**, up from 3 % in 2021.
-- Year-to-year revenue changes were driven far more by prices than by weather (6–13 times more,
-  2021–2024).
+  In 2024 the average price was €77/MWh, but a south-facing system at this site would have received €42/MWh.
+- In 2024, **20 % of the system's output was produced in hours with negative prices**, up from 3 % in 2021.
+- Year-to-year revenue changes were driven far more by prices than by weather (6–13 times more in
+  2021–2024, a period that included the 2022 energy crisis).
 
 ![Average price vs solar capture price](reports/figures/stage2_capture_vs_baseload.png)
 
@@ -73,14 +76,18 @@ Lenders often look at the **debt service coverage ratio (DSCR)**: the cash a pro
 operating costs and tax, divided by the loan payment due that year. A DSCR of 1.0 means the cash just
 covers the payment; lenders typically want a buffer above that.
 
-Using the same hypothetical park, costs and loan, and changing only how the electricity is sold:
+Using the same hypothetical park, costs and loan, and changing only how the electricity is sold, each
+historical year was replayed as the park's first operating year:
 
-- **Selling at market prices**, DSCR ranged from 0.56 (2024 conditions) to 5.29 (2022 conditions).
-- **With a fixed-price contract (PPA) at an illustrative €60/MWh**, DSCR ranged from 0.99 to 1.19.
+- **Selling at market prices**, the first-year DSCR ranged from 0.56 (2024 conditions) to 5.29 (2022
+  conditions).
+- **With a fixed-price contract (PPA) at an illustrative €60/MWh**, it ranged from 0.99 to 1.19.
 
 A fixed-price contract can reduce revenue uncertainty, but whether the loan is covered still depends
-on production, costs, contract terms and the amount of debt. With 80 % debt, the contract price would
-need to be about €60–67/MWh for a DSCR of 1.2. Stress tests, break-even prices and debt-sizing
+on production, costs, contract terms and the amount of debt. With 80 % debt, the first-year DSCR
+reaches 1.2 at a contract price of about €60–67/MWh. If that price stays fixed while costs rise and
+panel output slowly declines, the ratio falls over the 15-year loan: at €60/MWh, to about 0.7–0.9 in
+the final years. Stress tests, break-even prices and debt-sizing
 calculations are in the [financing report](reports/stage3/STAGE3_REPORT.md).
 
 ![Year-1 DSCR by contract type](reports/figures/stage3_dscr_year1.png)
@@ -99,7 +106,7 @@ calculations are in the [financing report](reports/stage3/STAGE3_REPORT.md).
 - **The PPA price is illustrative.** No verified Dutch contract-price benchmark was found.
 - **Four years are four very different markets** (including the 2022 energy crisis). They are used as
   historical "what if" replays, not as forecasts. A predictive model was considered and not built,
-  because the data do not support one ([why](docs/METHODS_AND_LIMITATIONS.md#7-why-no-predictive-model-was-built)).
+  because the available data were judged insufficient for a reliable one ([why](docs/METHODS_AND_LIMITATIONS.md#7-why-no-predictive-model-was-built)).
 - **A DSCR below 1 is not a default.** It means cash did not cover the payment in that year; no default
   probabilities are estimated.
 
@@ -121,7 +128,8 @@ python -m pytest -q
 ```
 
 Every download is logged with a SHA-256 hash in `data/raw/manifest.jsonl`. Reports are generated
-from the result files, so the numbers in them are never typed by hand.
+from the result files by the build scripts; a few descriptive values (such as the assumed system
+size) are written into the report text.
 
 ## Reports
 

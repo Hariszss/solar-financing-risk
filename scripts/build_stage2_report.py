@@ -1,4 +1,4 @@
-"""Render reports/stage2/STAGE2_REPORT.md from stage2_results.json (numbers never typed by hand)."""
+"""Render reports/stage2/STAGE2_REPORT.md from stage2_results.json (results are read from the JSON file)."""
 
 from __future__ import annotations
 

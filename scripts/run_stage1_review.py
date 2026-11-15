@@ -220,7 +220,7 @@ def write_md(res: dict, path: Path):
 
     z = res["silent_zeros"]
     L.append("## 3. Are the 26 PVGIS 5.3 zero hours really missing data?\n")
-    L.append(f"- Computed sun elevation in those hours: min {z['computed_elevation_deg']['min']}°, median "
+    L.append(f"- Computed hourly-average sun elevation in those hours: min {z['computed_elevation_deg']['min']}°, median "
              f"{z['computed_elevation_deg']['median']}°, max {z['computed_elevation_deg']['max']}° — far above the 5° "
              "threshold and the ~0.3° accuracy of the algorithm.")
     L.append(f"- KNMI Lelystad measured irradiance in those hours: min {z['knmi269_ghi_wm2_on_silent_hours']['min']}, median "

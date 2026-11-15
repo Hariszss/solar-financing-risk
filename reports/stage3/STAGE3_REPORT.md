@@ -236,6 +236,8 @@ Break-even PPA price (no clause) by production case, €/MWh, for DSCR 1.0 / 1.2
 
 ## 8. Break-even analysis
 
+All break-even prices and debt capacities in this section refer to the **first operating year**. With a fixed nominal contract price, rising costs and degradation lower the DSCR in later loan years (section 10).
+
 | Year | Merchant capture €/MWh (clipped) | Capture needed DSCR 1.0 | Capture needed DSCR 1.2 | PPA price DSCR 1.0 (no clause / no-pay) | PPA price DSCR 1.2 (no clause / no-pay) |
 |---|---|---|---|---|---|
 | 2021 | 83.81 | 60.23 | 66.84 | 60.23 / 61.51 | 66.84 / 68.29 |

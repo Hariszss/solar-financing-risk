@@ -47,7 +47,7 @@ Values: % difference in annual energy vs PVGIS 5.3 on common hours.
 
 ## 3. Are the 26 PVGIS 5.3 zero hours really missing data?
 
-- Computed sun elevation in those hours: min 10.2°, median 30.5°, max 60.6° — far above the 5° threshold and the ~0.3° accuracy of the algorithm.
+- Computed hourly-average sun elevation in those hours: min 10.2°, median 30.5°, max 60.6° — far above the 5° threshold and the ~0.3° accuracy of the algorithm.
 - KNMI Lelystad measured irradiance in those hours: min 38.9, median 322.2 W/m² (0 hours with 0); for comparison, median on ordinary producing daylight hours = 222.2 W/m².
 - ERA5 temperature in the same PVGIS 5.3 records present and non-zero: True → only the satellite-derived fields are zeroed.
 - PVGIS 6 reports null in 26 of 26 hours.

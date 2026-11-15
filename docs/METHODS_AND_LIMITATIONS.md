@@ -30,9 +30,11 @@ All series are converted to UTC, labelled by the start of each hour. Checks perf
 
 Main data findings:
 
-- **PVGIS 5.3 records 26 missing satellite hours as zero output** (sun height also 0, no
-  reconstruction flag). In those hours the computed sun elevation was 10–61° and the nearest KNMI
-  station measured a median of 322 W/m². PVGIS 6 reports the same hours as missing.
+- **PVGIS 5.3 reports zero irradiance and zero output for 26 daytime hours** (its sun height is also
+  0, and its "reconstructed" flag is not set). These values cannot be real: the computed hourly-average
+  sun elevation was 10.2°–60.6° and the nearest KNMI station measured a median of 322 W/m² (minimum
+  38.9 W/m²). PVGIS 6 reports the same hours as missing, which points to missing satellite input; the
+  cause is not documented by the provider.
 - **PVGIS 6 gives 4.1–4.4 % more energy than 5.3**, although the irradiance on the panel is identical
   (within 0.01 %). Controlled PVGIS 6 runs show that the updated module coefficients explain about
   2.5 of the 4.1 percentage points; the rest is not attributed.
@@ -81,7 +83,9 @@ Every parameter, with its source and page number, is listed in
 **Important context.** PBL's financing parameters describe projects that receive the SDE++ subsidy.
 The subsidy is excluded here. "DSCR at 80 % debt" therefore mixes a subsidised financing structure
 with unsubsidised revenue. For that reason the main financing results are **break-even prices** and
-**maximum debt at a target DSCR**, with 80 % used only as a reference.
+**maximum debt at a target DSCR** (both for the first operating year), with 80 % used only as a
+reference. With a fixed nominal contract price, rising costs and degradation lower the DSCR in later
+loan years (see the tenor stress in the Stage 3 report).
 
 No verified Dutch PPA price was found. The only verified reference is LevelTen's continental P25 index
 of PPA *offers* (€63.64/MWh Q3 2024; €62.31/MWh Q4 2024, as reported by PV Tech).
@@ -90,7 +94,7 @@ of PPA *offers* (€63.64/MWh Q3 2024; €62.31/MWh Q4 2024, as reported by PV T
 
 | Issue | Correction | Effect |
 |---|---|---|
-| PBL's 855 full-load hours is a 15-year average that already includes degradation; year 1 had been calibrated to it and degradation then applied again | Year 1 calibrated to 855 ÷ 0.956 = 894 kWh/kWp | Conservative-case DSCR (2024, PPA) 0.81 → 0.88 |
+| PBL's 855 full-load hours is a 15-year average that already includes degradation; calibrating year 1 to it understated year-1 output by about 4.4 % | Year 1 calibrated to 855 ÷ 0.956 = 894 kWh/kWp | Conservative-case DSCR (2024, PPA) 0.81 → 0.88 |
 | A first missing-data diagnostic used hourly-average sun elevation and over-counted near sunrise | Elevation evaluated at the sampling instant (HH:11) | Count stable at 26 hours for thresholds 2–5° |
 | Inverter replacement entered as a fixed €130,000, which broke the scale-invariance test | Expressed per kWp (€13/kWp), pre-funded over years 1–13 | Model scales consistently |
 | A revenue decomposition based on shares of log changes is unstable when effects have opposite signs | Replaced by LMDI | Exact decomposition |
@@ -102,7 +106,7 @@ of PPA *offers* (€63.64/MWh Q3 2024; €62.31/MWh Q4 2024, as reported by PV T
 | Grid connection | One-off in capex (€43/kWp) and an annual fee (€2.0/kWp/yr) | Different items; not double counted |
 | Profile cost (solar sells when prices are low) | Already in the hourly capture prices | Not added separately |
 | Imbalance cost | €7/MWh per MWh delivered | PBL's erratum defines it net of production-related profile cost, i.e. imbalance only; consistent |
-| Variable O&M €1.9/MWh | Per MWh delivered | Composition not itemised by PBL; a small overlap (≈ €17k/yr, ≈ 0.06 DSCR) cannot be excluded |
+| Variable O&M €1.9/MWh | Per MWh delivered | PBL's erratum raises variable O&M from €0.0019 to €0.0089/kWh by adding the €0.0070/kWh imbalance cost, so PBL treats them as separate items; what the €1.9/MWh itself contains is not itemised |
 | Land lease | Excluded by PBL | Under-counted; tested as a stress (€5/kWp/yr) |
 
 ## 6. Price data validation status

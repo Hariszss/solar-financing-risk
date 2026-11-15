@@ -60,7 +60,7 @@ An independent solar-position calculation (NOAA algorithm; agrees with PVGIS 5.3
 |   PVGIS 6 energy in those B hours (MWh, 3 yrs) | 0.225 |  |
 | Explicit nulls | 0 | 33 |
 
-**Finding:** PVGIS 5.3 encodes missing satellite slots as zeros (including its sun-height column) without setting its reconstruction flag. Every such hour coincides with an explicit null in PVGIS 6. A pipeline that trusted 5.3's zeros would book these hours as 'no production'.
+**Finding:** PVGIS 5.3 reports zeros for these hours (including its sun-height column) without setting its reconstruction flag. Zero irradiance is not physically possible with the sun this high, and every such hour is reported as missing (null) by PVGIS 6, which points to missing satellite input. A pipeline that trusted 5.3's zeros would book these hours as 'no production'.
 
 Materiality of PVGIS 6 nulls (KNMI-based proxy: GHI × month-hour PV/GHI ratio; order-of-magnitude only):
 
@@ -135,7 +135,7 @@ All values in EUR/MWh. The −500 €/MWh minimum (2 July 2023, 11:00–13:00 UT
 | Dataset | Verdict | Reason |
 |---|---|---|
 | PVGIS 6 (2021–2024) | ✅ PASS — primary production series | Only version covering 2024; complete index; 33 explicit nulls (≤0.315 % of annual energy); aligned with 5.3 and KNMI. Caveat: 'under development' → raw responses frozen with hashes. |
-| PVGIS 5.3 (2021–2023) | ⚠️ PASS for sensitivity only | No 2024; silent zero-encoding of missing slots; systematically 4.09–4.44 % lower than 6 → model-uncertainty band. |
+| PVGIS 5.3 (2021–2023) | ⚠️ PASS for sensitivity only | No 2024; zero values in 26 daytime hours, likely missing satellite input; systematically 4.09–4.44 % lower than 6 → model-uncertainty band. |
 | KNMI 269 / 273 | ✅ PASS — consistency & sensitivity | Complete, timestamps verified; cannot validate plant output. |
 | NL day-ahead prices (Energy-Charts) | ✅ PASS — not cross-checked against ENTSO-E | Complete 35,064 h, no duplicates, DST correct. |
 | NL day-ahead prices (ENTSO-E) | ⏳ PENDING | Requires personal API token (HTTP 401 without). |

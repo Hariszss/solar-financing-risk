@@ -96,6 +96,8 @@ for y in Y:
 L.append("![tornado](../figures/stage3_stress_tornado.png)\n")
 
 L.append("## 8. Break-even analysis\n")
+L.append("All break-even prices and debt capacities in this section refer to the **first operating year**. With a "
+         "fixed nominal contract price, rising costs and degradation lower the DSCR in later loan years (section 10).\n")
 B = R["breakeven"]
 L.append(tbl(["Year", "Merchant capture €/MWh (clipped)", "Capture needed DSCR 1.0", "Capture needed DSCR 1.2",
               "PPA price DSCR 1.0 (no clause / no-pay)", "PPA price DSCR 1.2 (no clause / no-pay)"],
